@@ -44,6 +44,11 @@ public:
 		right = nullptr;
 	}
 
+
+
+
+
+
 	template <typename K, typename E >
 	
 	bool insertdata(typename K, typename E)
@@ -63,6 +68,8 @@ public:
 		{
 			insert(typename K, typename E);
 		}
+
+		
 
 
 	} 
