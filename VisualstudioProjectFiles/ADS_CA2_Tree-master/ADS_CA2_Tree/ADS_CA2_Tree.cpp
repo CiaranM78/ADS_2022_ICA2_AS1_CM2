@@ -29,8 +29,37 @@ struct Personalinfo
 };
 
 
+
+
+
+void demoSimpleHash() {
+    //hasher for strings
+    hash<string> hasherStr;
+    string email = "john.smith@hotmail.com";
+    cout << "hash[" << email << "]: " << hasherStr(email) << endl;
+
+    //hasher for doubles
+    hash<double> hasherDbl;
+    double price = 123123.322;
+    cout << "hash[" << price << "]: " << hasherDbl(price) << endl;
+
+    //we can re-use a hasher
+    double weight = 12345.9897;
+    cout << "hash[" << weight << "]: " << hasherDbl(weight) << endl;
+
+    //we can store the hash value using size_t (basically an unsigned int)
+    size_t myHash = hasherStr("this is a hash value store in a uint");
+    cout << myHash << endl;
+}
+
+
+
+
+
+
 void readCsv()
 {
+    string key;
     string line;
     ifstream fin("Text.txt");
     if (fin)
@@ -39,7 +68,7 @@ void readCsv()
         while (!fin.eof())
         {
             getline(fin, line);
-            cout << line << endl;
+            //cout << line << endl;
             Personalinfo Pinfo;
             vector<string> items;
             string field = "";
@@ -66,13 +95,50 @@ void readCsv()
             {
                 items.push_back(field);
             }
+            
+
+            // Hashing the variables stored
+            // Hashing the user_id
+            hash<string> hasherStr;
+            string user_id = items[0];
+            cout << "hash[" << user_id << "]: " << hasherStr(user_id) << endl;
+
+            //Hashing the surname
+            string surname = items[3];
+            cout << "hash[" << surname << "]: " << hasherStr(surname) << endl;
+
+            //Hashing the postcode
+            string postcode = items[8];
+            cout << "hash[" << postcode << "]: " << hasherStr(postcode) << endl;
+
+
 
             
-            Pinfo.user_id =items[0];
-            Pinfo.surname = items[1];
-            Pinfo.postcode = items[2];
-            cout << "=====================================" << endl;
+
+       
+           size_t key = hasherStr(user_id) + hasherStr(surname) + hasherStr(postcode);
+
+
+            cout << "key is" << " " << key << endl;
+
             
+
+
+            Pinfo.user_id = items[0];
+            Pinfo.surname = items[3];
+            Pinfo.postcode = items[8];
+            cout << user_id << endl;
+            cout << items[3] << endl;
+            cout << items[8] << endl;
+            cout << "=====================================" << endl;
+
+
+
+
+
+
+
+     
         }
     }
 }
@@ -87,7 +153,7 @@ void readCsv()
             
             readCsv();
 
-
+            ;
 
         }
 
