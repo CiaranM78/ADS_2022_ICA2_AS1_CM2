@@ -44,37 +44,37 @@ public:
 		right = nullptr;
 	}
 
+	
 
 
 
 
 
-	template <typename K, typename E >
+
+/*	template <typename K, typename E >
 	
 	bool insertdata(typename K, typename E)
 	{
-		if (typename K == nullptr)
+		if (K < this->K)
 		{
-			return 0;
+			if (this->pLeft == nullptr)
+			{
+				this->pLeft = new TNode(K, E);
+			}
+			else
+			{
+				this->pLeft->insert(K, E);
+
+			}
 		}
+		return false;
+	
+	} */
 
-		else if (this->K >= K)
+	if (key == this->key)
+	{
 
-		{
-			this-> K new TNode(typename K, typename E)
-		}
-
-		else
-		{
-			insert(typename K, typename E);
-		}
-
-		
-
-
-	} 
-
-
+	}
 
 
 
