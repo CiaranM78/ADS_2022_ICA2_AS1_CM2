@@ -6,39 +6,41 @@
 #include <string>
 #include <vector>
 #include "TNode.h"
+#include "CSV.h"
+
 
 using namespace std;
+
+
+
+void display(CSV& Pinfo)
+{
+    cout << Pinfo.to_string() << endl;
+}
+
 
 
 struct Personalinfo
 {
     string user_id;
-    string current_ranking;
-    string first_name;
     string surname;
-    string gender;
-    string date_of_birth;
-    string email;
-    string phone;
     string postcode;
-    string  address;
-    string country;
-    string last_log_on_date;
-    string last_log_on_time;
-    string joined_on;
-    float account_credit;
+    
 
 };
+
+
 
 void readCsv()
 {
     string line;
-    ifstream fin("data_1000.txt");
+    ifstream fin("Text.txt");
         if (fin)
         {
             while (!fin.eof())
             {
                 getline(fin, line);
+                //cout << line << endl;
                 Personalinfo Pinfo;
                 vector<string> items;
                 string field = "";
@@ -53,16 +55,21 @@ void readCsv()
                     else if (!openData && line[i] == ',')
                     {
                         items.push_back(field);
+                        field = "";
                     }
 
+
+                    /*
                     else if (!openData && line[i] == '-')
                     {
                         items.push_back(field);
                     }
+                    */
 
 
-
-                    else { field += line[i] }
+                    else {
+                        field += line[i];
+                    }
                 }
 
                 if (field != "")
@@ -73,8 +80,18 @@ void readCsv()
 
                 }
 
+
+                
+                Pinfo.user_id = items[0];
+                Pinfo.surname = items[1];
+                Pinfo.postcode = items[2];
+                cout << "=====================================" << endl;
+                
+
+
+
                 //--------------------------------------------------------------------------
-              /*  string line;
+                /*string line;
                 ifstream fin("data_1000.txt");
                 if (fin)
                 {
@@ -91,9 +108,9 @@ void readCsv()
                     string first_name CSVrow[3];
 
 
-                }
+                }*/
 
-                */
+                
 
 
 
@@ -105,14 +122,16 @@ void readCsv()
 
             }
                 
-        }
+        
 
      
-
 
 int main()
 {
     std::cout << "bitmoji test!\n";
+
+    readCsv();
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
@@ -125,3 +144,7 @@ int main()
 //   4. Use the Error List window to view errors
 //   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
 //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+
+
+
+
