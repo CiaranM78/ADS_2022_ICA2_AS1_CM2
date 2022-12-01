@@ -12,7 +12,7 @@ class CSV
 	string surname;
 	string postcode;
 public:
-	CSV();
+
 	CSV(string user_id, string surname, string postcode);
 
 	string getID();

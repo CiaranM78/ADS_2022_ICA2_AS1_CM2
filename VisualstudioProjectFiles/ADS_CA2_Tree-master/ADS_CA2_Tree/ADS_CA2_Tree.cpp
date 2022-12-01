@@ -30,109 +30,127 @@ struct Personalinfo
 };
 
 
-
-void readCsv()
+vector<vector<string>> readDelimitedRows(string fileName)
 {
-    string line;
-    ifstream fin("Text.txt");
-        if (fin)
-        {
-            while (!fin.eof())
-            {
-                getline(fin, line);
-                //cout << line << endl;
-                Personalinfo Pinfo;
-                vector<string> items;
-                string field = "";
-                bool openData = false;
-                for (int i = 0; i < line.length(); i++)
-                {
-                    if (line[i] == '"')
-                    {
-                        openData = !openData;
-                    }
+    ifstream fin(fileName);
+    if (!fin)
+        throw runtime_error(fileName + " was not found! Is file in the correct sub-folder with main CPP file?");
 
-                    else if (!openData && line[i] == ',')
-                    {
-                        items.push_back(field);
-                        field = "";
-                    }
+    string rowStr;
+    string field = "";
+    vector<vector<string>> allRows;
+    vector<string> rowFields;
 
-
-                    /*
-                    else if (!openData && line[i] == '-')
-                    {
-                        items.push_back(field);
-                    }
-                    */
-
-
-                    else {
-                        field += line[i];
-                    }
-                }
-
-                if (field != "")
-                {
-                    items.push_back(field);
-
-                    
-
-                }
-
-
-                
-                Pinfo.user_id = items[0];
-                Pinfo.surname = items[1];
-                Pinfo.postcode = items[2];
-                cout << "=====================================" << endl;
-                
-
-
-
-                //--------------------------------------------------------------------------
-                /*string line;
-                ifstream fin("data_1000.txt");
-                if (fin)
-                {
-                    while (!fin.eof())
-                    {
-                        getline(fin, line);
-                        Personalinfo Pinfo;
-                vector<string> CSVrow = splitString("WBC88XPE6LP", 70, "Colby, Burks", "Male"	10 / 07 / 1983, "rutrum.non@aol.org", 1 - 704 - 685 - 7028, 6723 EV	460 - 8248, "Tempor Rd.Peru", 11 / 11 / 2023, 03:23, 29 / 11 / 2018, $121; .31, ",");
-                if (CSVrow.size() = 15)
-                {
-                    string make CSVrow[0];
-                    string user_id CSVrow[1];
-                    string current_ranking CSVrow[2];
-                    string first_name CSVrow[3];
-
-
-                }*/
-
-                
-
-
-
-            }
-
-
-
-                }
-
-            }
-                
+    while (!fin.eof())
+    {
+        getline(fin, rowStr);
         
+        bool quoteOpen = false;
+        for (int i = 0; i < rowStr.length(); i++)
+        {
+            if (rowStr[i] == '"')
+            {
+                quoteOpen = !quoteOpen;
+            }
+            else if (!quoteOpen && rowStr[i] == ',')
+            {
+                rowFields.push_back(field);
+                field = "";
+            }
+            else
+            {
+                field += rowStr[i];
+            }
+        }
+        if (field != "")
+        {
+            rowFields.push_back(field);
+        }
+        field = "";
 
-     
+        if (rowFields.size() != 0)
+            allRows.push_back(rowFields);
 
-int main()
-{
-    std::cout << "bitmoji test!\n";
-
-    readCsv();
-    
+        rowFields.clear();
+    }
+    return allRows;
 }
+
+
+
+vector<string> splitString(string str, string delimiter)
+{
+    vector<string> words;
+    size_t pos = 0;
+    std::string subString;
+    while ((pos = str.find(delimiter)) != std::string::npos) {
+        words.push_back(str.substr(0, pos));
+        str.erase(0, pos + delimiter.length());
+    }
+    words.push_back(str);
+
+    return words;
+}
+
+
+
+
+void demoCSVToObject()
+{
+    //note: data is a sub-folder under the folder with main CPP file
+    string fileName = "Text.Txt";
+    vector<vector<string>> allData = readDelimitedRows(fileName);
+
+    for (vector<string> row : allData) {
+        for (string field : row) {
+            cout << field << ",";
+        }
+        cout << endl;
+    }
+}
+
+/*
+void demoParseString()
+{
+    string str = "ford, 2012, 1299.55, 25/12/2022";
+    string delimiter = ",";
+
+    vector<string> rowFromCSV = splitString(str, delimiter);
+
+    if (rowFromCSV.size() == 4)
+    {
+        string make = rowFromCSV[0];
+        int year = stoi(rowFromCSV[1]);
+        double price = stod(rowFromCSV[2]);
+        vector<string> dateWords = splitString(rowFromCSV[3], "/");
+
+        if (dateWords.size() == 3)
+        {
+            string user_id = dateWords[0];
+            string surname = dateWords[1];
+            string postcode = dateWords[2];
+
+
+            CSV registrationDate(user_id, surname, postcode);
+            cout << "Car: " << registrationDate << endl;
+        }
+    }
+}
+*/
+
+
+
+
+
+    int main()
+    {
+        
+        cout << endl << "demoCSVToObject()..........." << endl;
+        demoCSVToObject();
+        
+        
+    }
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
@@ -146,5 +164,53 @@ int main()
 //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
 
 
+    /*
+
+    void readCsv()
+    {
+        string line;
+        ifstream fin("Text.txt");
+        if (fin)
+        {
+
+            while (!fin.eof())
+            {
+                getline(fin, line);
+                cout << line << endl;
+                Personalinfo Pinfo;
+                vector<string> items;
+                string field = "";
+                bool quoteOpen = false;
+                for (int i = 0; i < line.length(); i++)
+                {
+                    if (line[i] == '"')
+                    {
+                        quoteOpen = !quoteOpen;
+                    }
+                    else if (!quoteOpen && line[i]
+                        == ',')
+                    {
+                        items.push_back(field);
+                        field = "";
+                    }
+
+                    else
+                    {
+                        field += line[i];
+                    }
+                }
+                if (field != "")
+                {
+                    items.push_back(field);
+                }
 
 
+                /*
+                Pinfo.user_id = stoi(items[0]);
+                Pinfo.surname = items[1];
+                Pinfo.postcode = items[2];
+                cout << "=====================================" << endl;
+                */
+      
+
+        
