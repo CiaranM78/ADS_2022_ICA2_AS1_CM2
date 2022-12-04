@@ -1,2 +1,7 @@
 ﻿  ADS_CA2_Tree.cpp
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\ADS_CA2_Tree.cpp(144,25): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
   ADS_CA2_Tree.vcxproj -> D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\x64\Debug\ADS_CA2_Tree.exe

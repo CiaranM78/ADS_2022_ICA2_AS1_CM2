@@ -6,7 +6,9 @@
 #include <vector>
 #include "TNode.h"
 #include "CSV.h"
-
+#include "BSTNode.h"
+#include "Util.h"
+#include "String"
 
 using namespace std;
 
@@ -24,7 +26,7 @@ struct Personalinfo
     string user_id;
     string surname;
     string postcode;
-    
+    size_t key;
 
 };
 
@@ -59,10 +61,13 @@ void demoSimpleHash() {
 
 void readCsv()
 {
-    string key;
+    BinaryTree<int> tree;
+    size_t key;
     string line;
     ifstream fin("Text.txt");
     if (fin)
+
+
     {
 
         while (!fin.eof())
@@ -70,7 +75,7 @@ void readCsv()
             getline(fin, line);
             //cout << line << endl;
             Personalinfo Pinfo;
-            vector<string> items;
+            vector<string> data;
             string field = "";
             bool quoteOpen = false;
             for (int i = 0; i < line.length(); i++)
@@ -82,7 +87,7 @@ void readCsv()
                 else if (!quoteOpen && line[i]
                     == ',')
                 {
-                    items.push_back(field);
+                    data.push_back(field);
                     field = "";
                 }
 
@@ -93,54 +98,70 @@ void readCsv()
             }
             if (field != "")
             {
-                items.push_back(field);
+                data.push_back(field);
             }
             
-
+            
             // Hashing the variables stored
             // Hashing the user_id
             hash<string> hasherStr;
-            string user_id = items[0];
-            cout << "hash[" << user_id << "]: " << hasherStr(user_id) << endl;
+            string user_id = data[0];
+            //cout << "hash[" << user_id << "]: " << hasherStr(user_id) << endl;
 
             //Hashing the surname
-            string surname = items[3];
-            cout << "hash[" << surname << "]: " << hasherStr(surname) << endl;
+            string surname = data[3];
+            //cout << "hash[" << surname << "]: " << hasherStr(surname) << endl;
 
             //Hashing the postcode
-            string postcode = items[8];
-            cout << "hash[" << postcode << "]: " << hasherStr(postcode) << endl;
+            string postcode = data[8];
+            //cout << "hash[" << postcode << "]: " << hasherStr(postcode) << endl;
 
 
 
             
 
        
-           size_t key = hasherStr(user_id) + hasherStr(surname) + hasherStr(postcode);
+            key = hasherStr(user_id);
+               //+ hasherStr(surname) + hasherStr(postcode);
 
-
-            cout << "key is" << " " << key << endl;
+          
+            //cout << "key is" << " " << key << endl;
 
             
 
+            
+            Pinfo.user_id = data[0];
+            Pinfo.surname = data[3];
+            Pinfo.postcode = data[8];
+            Pinfo.key = key;
+            //cout << user_id << endl;
+            //cout << items[3] << endl;
+           // cout << items[8] << endl;
+            //cout << "=====================================" << endl;
+            
+            
+            
+            tree.add(key);
+            
+            tree.add(50);
+            tree.add(514789);
+            tree.add(627891);
+            
 
-            Pinfo.user_id = items[0];
-            Pinfo.surname = items[3];
-            Pinfo.postcode = items[8];
-            cout << user_id << endl;
-            cout << items[3] << endl;
-            cout << items[8] << endl;
-            cout << "=====================================" << endl;
+            //tree.remove(2146364441);
+            //tree.remove(2137056470);
 
-
-
-
-
-
-
+            
      
         }
+        
+        printBT(tree.root);
+        cout << tree.count() << endl;
+
+     
+        
     }
+    
 }
         
         
@@ -149,11 +170,12 @@ void readCsv()
 
         int main()
         {
-
+            
             
             readCsv();
+            
+            
 
-            ;
 
         }
 
