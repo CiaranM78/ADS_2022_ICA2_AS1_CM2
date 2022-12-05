@@ -4,7 +4,7 @@ template <class T, class V>
 class BSTNode
 {
 
-	BSTNode<T>* parent;
+	BSTNode<T,V>* parent;
 	BSTNode<T>* left;
 	BSTNode<T>* right;
 	T key;

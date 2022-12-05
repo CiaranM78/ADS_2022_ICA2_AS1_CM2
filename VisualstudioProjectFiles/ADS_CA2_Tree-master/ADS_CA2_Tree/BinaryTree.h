@@ -1,58 +1,72 @@
 #pragma once
-#include "BSTNode.h"
 #include <vector>
 
 
-template <class T>
+template <class K, class V>
 class BinaryTree
 {
-	void addItemToArray(BSTNode<T>* node, int& pos, int* arr);
+//	void addItemToArray(BSTNode<T>* node, int& pos, int* arr);
 public:
-	BSTNode<T>* root;
+	TNode<K,V>* root;
 	BinaryTree();
-	void add(T item);
-	bool remove(T item);
-	void clear();
-	int count();
+	void add(K key, V item);
+	//bool remove(K item);
+	//void clear();
+	//int count();
+	V search(K toFind);
+	//V* toArray();
+	//void printInOrder();
+	//void printInOrder(TNode<K, V>* node);
+	//void printPreOrder();
+	//void printPreOrder(TNode<K, V>* node);
+	//void printPostOrder();
+	//void printPostOrder(TNode<K, V>* node);
 
-	T* toArray();
-	void printInOrder();
-	void printInOrder(BSTNode<T>* node);
-	void printPreOrder();
-	void printPreOrder(BSTNode<T>* node);
-	void printPostOrder();
-	void printPostOrder(BSTNode<T>* node);
-
-	~BinaryTree();
+	~BinaryTree() {};
 };
 
-template <class T>
-BinaryTree<T>::BinaryTree()
+template <class K, class V>
+BinaryTree<K, V>::BinaryTree()
 {
 	root = nullptr;
 }
 
-template <class T>
-void BinaryTree<T>::add(T item)
+
+//template <class K, class V>
+//V search(K toFind)
+//{
+//	TNode* node = root;
+//
+//	return node->getData();
+//}
+
+
+
+
+template <class K, class V>
+void BinaryTree<K, V>::add(K key, V item)
 {
 	if (root == nullptr)
 	{
-		root = new BSTNode<T>(item);
+		root = new TNode<K,V>(key, item);
 	}
 	else
 	{
-		root->add(item);
+		root->insert(key, item);
 	}
 }
-template <class T>
-int BinaryTree<T>::count()
+/*
+template <class K, class V>
+int BinaryTree<K, V>::count()
 {
 	if (root == nullptr)
 		return 0;
 	return root->count();
 }
-template <class T>
-bool BinaryTree<T>::remove(T item)
+*/
+/*
+template <class K, class V>
+bool BinaryTree<K, V>::remove(K item)
 {
 	BSTNode<T>* toBeRemoved = root;
 	BSTNode<T>* parent = nullptr;
@@ -126,13 +140,14 @@ bool BinaryTree<T>::remove(T item)
 	return false;
 }
 
-
+*/
 /**
 	Helper Function to put the binary tree into a sorted array;
 
 */
-template <class T>
-void BinaryTree<T>::addItemToArray(BSTNode<T>* node, int& pos, int* arr)
+/*
+template <class K, class V>
+void BinaryTree<K, V>::addItemToArray(BSTNode<T>* node, int& pos, int* arr)
 {
 	if (node != nullptr)
 	{
@@ -143,87 +158,90 @@ void BinaryTree<T>::addItemToArray(BSTNode<T>* node, int& pos, int* arr)
 	}
 
 }
-
+*/
 /**
 	This function is used to convert this binary tree into a sorted array.
 
 */
-template <class T>
-T* BinaryTree<T>::toArray()
+/*
+template <class K, class V>
+T* BinaryTree<K, V>::toArray()
 {
 	T* arr = new T[root->count()];
 	int pos = 0;
 	addItemToArray(root, pos, arr);
 	return arr;
 }
-
-template <class T>
-void BinaryTree<T>::clear()
+*/
+/*
+template <class K, class V>
+void BinaryTree<K, V>::clear()
 {
 	delete root;
 	root = nullptr;
 }
-template <class T>
-BinaryTree<T>::~BinaryTree()
+template <class K, class V>
+BinaryTree<K, V>::~BinaryTree()
 {
 	delete root;
 }
-
+*/
 
 
 /*
 Print the entire tree using in order traversal
 */
-template<class T>
-void BinaryTree<T>::printInOrder()
+/*
+template <class K, class V>
+void BinaryTree<K, V>::printInOrder()
 {
 	this->printInOrder(root);
 	cout << endl;
-}
+}*/
 /*
 Print a subtree using in order traversal
 */
-template<class T>
-void BinaryTree<T>::printInOrder(BSTNode<T>* node)
-{
-
-
-}
+//template <class K, class V>
+//void BinaryTree<K, V>::printInOrder(BSTNode<T>* node)
+//{
+//
+//
+//}
 /*
 Print the entire tree using pre order traversal
 */
-template<class T>
-void BinaryTree<T>::printPreOrder()
-{
-	this->printPreOrder(root);
-	cout << endl;
-}
-
-/*
-Print a subtree using post order traversal
-*/
-template<class T>
-void BinaryTree<T>::printPreOrder(BSTNode<T>* node)
-{
-
-
-}
-
-/*
-	Print the entire tree using post order traversal
-*/
-template<class T>
-void BinaryTree<T>::printPostOrder()
-{
-	this->printPostOrder(root);
-	cout << endl;
-}
-/*
-		Print a subtree using post order traversal
-*/
-template<class T>
-void BinaryTree<T>::printPostOrder(BSTNode<T>* node)
-{
-
-
-}
+//template <class K, class V>
+//void BinaryTree<K, V>::printPreOrder()
+//{
+//	this->printPreOrder(root);
+//	cout << endl;
+//}
+//
+///*
+//Print a subtree using post order traversal
+//*/
+//template <class K, class V>
+//void BinaryTree<K, V>::printPreOrder(BSTNode<T>* node)
+//{
+//
+//
+//}
+//
+///*
+//	Print the entire tree using post order traversal
+//*/
+//template <class K, class V>
+//void BinaryTree<K, V>::printPostOrder()
+//{
+//	this->printPostOrder(root);
+//	cout << endl;
+//}
+///*
+//		Print a subtree using post order traversal
+//*/
+//template <class K, class V>
+//void BinaryTree<K, V>::printPostOrder(BSTNode<T>* node)
+//{
+//
+//
+//}

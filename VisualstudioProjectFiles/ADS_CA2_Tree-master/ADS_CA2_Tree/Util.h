@@ -1,12 +1,12 @@
 #pragma once
 
-#include "BinaryTree.h"
+//#include "BinaryTree.h"
 
 /*
 recursive function to display a binary tree
 */
 template <class T, class V>
-void printBT(const std::string& prefix, BSTNode<T, V>* node, bool isLeft)
+void printBT(const std::string& prefix, TNode<T, V>* node, bool isLeft)
 {
 	if (node != nullptr)
 	{
@@ -15,7 +15,7 @@ void printBT(const std::string& prefix, BSTNode<T, V>* node, bool isLeft)
 		std::cout << (isLeft ? "<--" : ">--");
 
 		// print the value of the node
-		std::cout << node->getItem() << std::endl;
+		std::cout <<"(" << node->getKey() <<")"<< node->getData().user_id << std::endl;
 
 		// enter the next tree level - left and right branch
 		printBT(prefix + (isLeft ? "|   " : "    "), node->getLeft(), true);
@@ -26,7 +26,7 @@ void printBT(const std::string& prefix, BSTNode<T, V>* node, bool isLeft)
 Display function to print the tree
 */
 template <class T, class V>
-void printBT(BSTNode<T, V>* node)
+void printBT(TNode<T, V>* node)
 {
 	printBT("", node, true);
 }
@@ -38,7 +38,7 @@ void printBT(BSTNode<T, V>* node)
 Recursive Function to add each element when balancing a binary tree
 */
 
-/**/
+/*
 void createBalancedTree(BinaryTree<int>& tree, int min, int max, int* arr)
 {
 	if (min < max)
@@ -48,10 +48,11 @@ void createBalancedTree(BinaryTree<int>& tree, int min, int max, int* arr)
 		createBalancedTree(tree, min, mid, arr);
 		createBalancedTree(tree, mid + 1, max, arr);
 	}
-};
+};*/
 /*
 Recursive Function used to balance a binary tree
 */
+/*
 void balance(BinaryTree<int>& tree)
 {
 	int* arr = tree.toArray();
@@ -61,3 +62,4 @@ void balance(BinaryTree<int>& tree)
 	delete[] arr;
 
 }
+*/

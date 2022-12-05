@@ -19,23 +19,56 @@ private:
 
 
 public:
+    TNode* getLeft()
+    {
+        return pLeft;
+    }
+
+    TNode* getRight()
+    {
+        return pRight;
+    }
+    K getKey()
+    {
+        return key;
+    }
     TNode(K key, E value)
     {
         this->key = key;
         this->data = value;
     }
 
-    bool insert(K key, E data) {
+    bool insert(K key, E data)
+    {
+        if (key == this->key)
+        {
+            return false;
+        }
         if (key < this->key)
         {
             if (this->pLeft == nullptr)
             {
                 this->pLeft = new TNode(key, data);
+                return true;
             }
             else
             {
-                this->pLeft->insert(key, data);
+               return this->pLeft->insert(key, data);
             }
+            
+        }
+        else if (key > this->key)
+        {
+            if (this->pRight == nullptr)
+            {
+                this->pRight = new TNode(key, data);
+                return true;
+            }
+            else
+            {
+                return this->pRight->insert(key, data);
+            }
+            
         }
         return false;
     }

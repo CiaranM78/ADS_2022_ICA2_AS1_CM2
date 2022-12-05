@@ -1,51 +1,8 @@
 ﻿  ADS_CA2_Tree.cpp
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(7,2): error C2976: 'BSTNode': too few template arguments
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(5): message : see declaration of 'BSTNode'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(28): message : see reference to class template instantiation 'BSTNode<T,V>' being compiled
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(8,2): error C2976: 'BSTNode': too few template arguments
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(5): message : see declaration of 'BSTNode'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(9,2): error C2976: 'BSTNode': too few template arguments
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(5): message : see declaration of 'BSTNode'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(13,1): error C2143: syntax error: missing ';' before 'public'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(9,22): error C2976: 'BSTNode': too few template arguments
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(5): message : see declaration of 'BSTNode'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(27): message : see reference to class template instantiation 'BinaryTree<T>' being compiled
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(11,2): error C2976: 'BSTNode': too few template arguments
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(5): message : see declaration of 'BSTNode'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(20,20): error C2976: 'BSTNode': too few template arguments
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(5): message : see declaration of 'BSTNode'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(22,21): error C2976: 'BSTNode': too few template arguments
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(5): message : see declaration of 'BSTNode'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(24,22): error C2976: 'BSTNode': too few template arguments
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(5): message : see declaration of 'BSTNode'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(135,36): error C2976: 'BSTNode': too few template arguments
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(5): message : see declaration of 'BSTNode'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(187,34): error C2976: 'BSTNode': too few template arguments
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(5): message : see declaration of 'BSTNode'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(206,35): error C2976: 'BSTNode': too few template arguments
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(5): message : see declaration of 'BSTNode'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(225,36): error C2976: 'BSTNode': too few template arguments
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(5): message : see declaration of 'BSTNode'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\Util.h(9,41): error C2976: 'BSTNode': too few template arguments
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(5): message : see declaration of 'BSTNode'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\Util.h(29,14): error C2976: 'BSTNode': too few template arguments
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(5): message : see declaration of 'BSTNode'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\Util.h(31,9): error C2672: 'printBT': no matching overloaded function found
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\Util.h(31,9): error C2780: 'void printBT(BSTNode *)': expects 1 arguments - 3 provided
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\Util.h(29): message : see declaration of 'printBT'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\Util.h(31,9): error C2783: 'void printBT(const std::string &,BSTNode *,bool)': could not deduce template argument for 'T'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\Util.h(9): message : see declaration of 'printBT'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\Util.h(31,9): message : 'printBT': function declaration must be available as none of the arguments depend on a template parameter
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\ADS_CA2_Tree.cpp(125,37): warning C4552: '+': result of expression not used
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\ADS_CA2_Tree.cpp(144,25): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
+C:\Users\D00241651\Documents\GitHub\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\ADS_CA2_Tree.cpp(125,37): warning C4552: '+': result of expression not used
+C:\Users\D00241651\Documents\GitHub\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\ADS_CA2_Tree.cpp(144,32): warning C4267: 'argument': conversion from 'size_t' to 'K', possible loss of data
           with
           [
-              T=int
+              K=int
           ]
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\ADS_CA2_Tree.cpp(158,9): error C2672: 'printBT': no matching overloaded function found
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\ADS_CA2_Tree.cpp(158,9): error C2783: 'void printBT(BSTNode *)': could not deduce template argument for 'T'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\Util.h(29): message : see declaration of 'printBT'
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\ADS_CA2_Tree.cpp(158,26): error C2780: 'void printBT(const std::string &,BSTNode *,bool)': expects 3 arguments - 1 provided
-C:\Users\D00241651\GithubClones\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\Util.h(9): message : see declaration of 'printBT'
-  CSV.cpp
-  Generating Code...
+  ADS_CA2_Tree.vcxproj -> C:\Users\D00241651\Documents\GitHub\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\x64\Debug\ADS_CA2_Tree.exe

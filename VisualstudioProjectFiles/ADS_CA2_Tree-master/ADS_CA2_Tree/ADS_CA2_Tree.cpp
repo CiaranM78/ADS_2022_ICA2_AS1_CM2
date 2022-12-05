@@ -6,8 +6,8 @@
 #include <vector>
 #include "TNode.h"
 #include "CSV.h"
-#include "BSTNode.h"
 #include "Util.h"
+#include "BinaryTree.h"
 #include "String"
 
 using namespace std;
@@ -61,7 +61,7 @@ void demoSimpleHash() {
 
 void readCsv()
 {
-    BinaryTree<int> tree;
+    BinaryTree<int, Personalinfo> tree;
     size_t key;
     string line;
     ifstream fin("Text.txt");
@@ -141,11 +141,11 @@ void readCsv()
             
             
             
-            tree.add(key);
+            tree.add(key, Pinfo);
             
-            tree.add(50);
-            tree.add(514789);
-            tree.add(627891);
+           // tree.add(50);
+           // tree.add(514789);
+            //tree.add(627891);
             
 
             //tree.remove(2146364441);
@@ -156,7 +156,7 @@ void readCsv()
         }
         
         printBT(tree.root);
-        cout << tree.count() << endl;
+      //  cout << tree.count() << endl;
 
      
         
