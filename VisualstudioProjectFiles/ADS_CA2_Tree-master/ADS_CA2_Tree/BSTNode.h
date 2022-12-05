@@ -1,89 +1,91 @@
 #pragma once
 
-template <class T>
+template <class T, class V>
 class BSTNode
 {
 
 	BSTNode<T>* parent;
 	BSTNode<T>* left;
 	BSTNode<T>* right;
-	T data;
+	T key;
+	V data;
 
 public:
 	BSTNode();
 	BSTNode(T data);
 	void setItem(T item);
 	int count();
-	void add(T item);
-	BSTNode<T>* getParent();
-	BSTNode<T>* getLeft();
-	BSTNode<T>* getRight();
-	void setLeft(BSTNode<T>* l);
-	void setRight(BSTNode<T>* r);
+	void add(T item, V data);
+	BSTNode<T, V>* getParent();
+	BSTNode<T, V>* getLeft();
+	BSTNode<T, V>* getRight();
+	void setLeft(BSTNode<T, V>* l);
+	void setRight(BSTNode<T, V>* r);
 	T getItem();
 	~BSTNode();
 	
 
 };
-template <class T>
-BSTNode<T>::~BSTNode()
+
+template <class T, class V>
+BSTNode<T, V>::~BSTNode()
 {
 	delete left;
 	delete right;
 }
-template <class T>
-T BSTNode<T>::getItem()
+template <class T, class V>
+T BSTNode<T, V>::getItem()
 {
 	return this->data;
 }
-template <class T>
-BSTNode<T>* BSTNode<T>::getLeft()
+template <class T, class V>
+BSTNode<T, V>* BSTNode<T, V>::getLeft()
 {
 	return this->left;
 }
-template <class T>
-BSTNode<T>* BSTNode<T>::getRight()
+template <class T, class V>
+BSTNode<T, V>* BSTNode<T, V>::getRight()
 {
 	return this->right;
 }
-template <class T>
-BSTNode<T>* BSTNode<T>::getParent()
+template <class T, class V>
+BSTNode<T, V>* BSTNode<T, V>::getParent()
 {
 	return this->parent;
 }
-template <class T>
-void BSTNode<T>::setLeft(BSTNode<T>* l)
+template <class T, class V>
+void BSTNode<T, V>::setLeft(BSTNode<T, V>* l)
 {
 	this->left = l;
 }
-template <class T>
-void BSTNode<T>::setRight(BSTNode<T>* r)
+template <class T, class V>
+void BSTNode<T, V>::setRight(BSTNode<T, V>* r)
 {
 	this->right = r;
 }
 
-template <class T>
-void BSTNode<T>::setItem(T item)
+template <class T, class V>
+void BSTNode<T, V>::setItem(T item)
 {
 	this->data = item;
 }
 
 
-template <class T>
-BSTNode<T>::BSTNode()
+template <class T, class V>
+BSTNode<T, V>::BSTNode()
 {
 	parent = left = right = nullptr;
 }
 
 
-template <class T>
-BSTNode<T>::BSTNode(T data)
+template <class T, class V>
+BSTNode<T, V>::BSTNode(T data)
 {
 	this->data = data;
 	parent = left = right = nullptr;
 }
-template <class T>
-int BSTNode<T>::count()
+template <class T, class V>
+int BSTNode<T, V>::count()
 {
 	int c = 1;
 	if (left != nullptr)
@@ -93,35 +95,35 @@ int BSTNode<T>::count()
 	return c;
 }
 
-template <class T>
-void BSTNode<T>::add(T item)
+template <class T, class V>
+void BSTNode<T, V>::add(T key, V data)
 {
-	if (data == item)
+	if (key == this->key)
 	{
 		return;
 	}
-	if (item < data)
+	if (key < this->key)
 	{
 		if (left == nullptr)
 		{
-			left = new BSTNode<T>(item);
+			left = new BSTNode<T>(key, data);
 			left->parent = this;
 		}
 		else
 		{
-			left->add(item);
+			left->add(key, data);
 		}
 	}
 	else
 	{
 		if (right == nullptr)
 		{
-			right = new BSTNode<T>(item);
+			right = new BSTNode<T>(key, data);
 			right->parent = this;
 		}
 		else
 		{
-			right->add(item);
+			right->add(key, data);
 		}
 	}
 }

@@ -122,7 +122,7 @@ void readCsv()
 
        
             key = hasherStr(user_id);
-               //+ hasherStr(surname) + hasherStr(postcode);
+               + hasherStr(surname) + hasherStr(postcode);
 
           
             //cout << "key is" << " " << key << endl;

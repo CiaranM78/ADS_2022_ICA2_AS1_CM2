@@ -5,8 +5,8 @@
 /*
 recursive function to display a binary tree
 */
-template <class T>
-void printBT(const std::string& prefix, BSTNode<T>* node, bool isLeft)
+template <class T, class V>
+void printBT(const std::string& prefix, BSTNode<T, V>* node, bool isLeft)
 {
 	if (node != nullptr)
 	{
@@ -25,8 +25,8 @@ void printBT(const std::string& prefix, BSTNode<T>* node, bool isLeft)
 /*
 Display function to print the tree
 */
-template <class T>
-void printBT(BSTNode<T>* node)
+template <class T, class V>
+void printBT(BSTNode<T, V>* node)
 {
 	printBT("", node, true);
 }
@@ -48,7 +48,7 @@ void createBalancedTree(BinaryTree<int>& tree, int min, int max, int* arr)
 		createBalancedTree(tree, min, mid, arr);
 		createBalancedTree(tree, mid + 1, max, arr);
 	}
-}
+};
 /*
 Recursive Function used to balance a binary tree
 */
