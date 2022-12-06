@@ -135,6 +135,7 @@
     <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="BSTNode.h" />
     <ClInclude Include="CSV.h" />
+    <ClInclude Include="Customer.h" />
     <ClInclude Include="TNode.h" />
     <ClInclude Include="Util.h" />
   </ItemGroup>

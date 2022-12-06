@@ -1,3 +1,4 @@
+#pragma once
 #include "pch.h"
 #include "CppUnitTest.h"
 #include "../ADS_CA2_Tree/BinaryTree.h"
