@@ -40,11 +40,11 @@ public:
 
     bool insert(K key, E data)
     {
-        if (key == this->key)
+        if (key.hash() == this->key.hash())
         {
             return false;
         }
-        if (key < this->key)
+        if (key.hash() < this->key.hash())
         {
             if (this->pLeft == nullptr)
             {
@@ -57,7 +57,7 @@ public:
             }
             
         }
-        else if (key > this->key)
+        else if (key.hash() > this->key.hash())
         {
             if (this->pRight == nullptr)
             {

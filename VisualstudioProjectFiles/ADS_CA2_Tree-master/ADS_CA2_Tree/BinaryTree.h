@@ -32,13 +32,32 @@ BinaryTree<K, V>::BinaryTree()
 }
 
 
-//template <class K, class V>
-//V search(K toFind)
-//{
-//	TNode* node = root;
-//
-//	return node->getData();
-//}
+template <class K, class V>
+V BinaryTree<K, V>::search(K toFind)
+{
+	TNode<K, V>* node = root;
+	while (node != nullptr)
+	{
+		if (node->getKey().hash() == toFind.hash())
+		{
+			break;
+		}
+		else if (toFind.hash() < node->getKey().hash())
+		{
+			node = node->getLeft();
+		}
+		else
+		{
+			node = node->getRight();
+		}
+	}
+	if (node != nullptr)
+	{
+		return node->getData();
+	}
+	else
+		return nullptr;
+}
 
 
 

@@ -15,7 +15,7 @@ void printBT(const std::string& prefix, TNode<T, V>* node, bool isLeft)
 		std::cout << (isLeft ? "<--" : ">--");
 
 		// print the value of the node
-		std::cout <<"(" << node->getKey() <<")"<< node->getData().user_id << std::endl;
+		std::cout <<"(" << node->getKey().hash() << ")" << node->getData()->getuser_id() << std::endl;
 
 		// enter the next tree level - left and right branch
 		printBT(prefix + (isLeft ? "|   " : "    "), node->getLeft(), true);
@@ -44,6 +44,7 @@ void createBalancedTree(BinaryTree<int>& tree, int min, int max, int* arr)
 	if (min < max)
 	{
 		int mid = (min + max) / 2;
+		//add(node.getKey(), node.getData())
 		tree.add(arr[mid]);
 		createBalancedTree(tree, min, mid, arr);
 		createBalancedTree(tree, mid + 1, max, arr);

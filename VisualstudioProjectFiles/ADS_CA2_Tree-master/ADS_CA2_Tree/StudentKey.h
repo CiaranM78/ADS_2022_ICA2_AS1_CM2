@@ -34,6 +34,8 @@ public:
 
     }
 
+    StudentKey() {}
+
     string getuser_id() const { return this->user_id; }
    
     string getsurname() const { return this->surname; }
@@ -42,8 +44,7 @@ public:
     string getpostcode() const { return this->postcode; }
     
 
-
-
+  
 
 
     friend ostream& operator<<(ostream& output, StudentKey& student) {
@@ -68,7 +69,7 @@ public:
         size_t hash = std::hash<string>()(this->user_id)
             + 31 * std::hash<string>()(this->surname)
             + 57 * std::hash<string>()(this->postcode);
-
+        return hash;
     }
 
 
