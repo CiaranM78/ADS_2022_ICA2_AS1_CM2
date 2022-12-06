@@ -4,6 +4,9 @@
 #include "../ADS_CA2_Tree/BinaryTree.h"
 #include "../ADS_CA2_Tree/StudentKey.h"
 #include "../ADS_CA2_Tree/Student.h"
+#include "../ADS_CA2_Tree/TNode.h"
+#include "../ADS_CA2_Tree/BSTNode.h"
+
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace ADSCA2UnitTests
@@ -41,14 +44,18 @@ namespace ADSCA2UnitTests
 		*/
 		TEST_METHOD(TestAddToRootLeft)
 		{
-			/*BinaryTree<int> tree;
-			tree.add(2);
-			tree.add(1);
+			BinaryTree<StudentKey, Student > tree;
+			StudentKey key("R7284", "robinson", "code575");
+			tree.add(0);
+			tree.add(3);
+			tree.add(8);
+			BSTNode <string>* left = tree.root->getLeft();
 			Assert::IsNotNull(tree.root);
-			Assert::AreEqual(2, tree.root->getItem());
-			BSTNode<int>* left = tree.root->getLeft();
+			 BSTNode <string>* left = tree.root->getLeft();
 			Assert::IsNotNull(left);
-			Assert::AreEqual(1, left->getItem());*/
+			Assert::AreEqual(left->add(key, data), left->getItem(0));
+			Assert::AreEqual(left->add(key, data), left->getItem(3));
+			Assert::AreEqual(left->add(key, data), left->getItem(8));
 		}
 		/*
 		This test ensures a node is created on the right branch
@@ -56,14 +63,18 @@ namespace ADSCA2UnitTests
 		*/
 		TEST_METHOD(TestAddToRootRight)
 		{
-		/*	BinaryTree<int> tree;
-			tree.add(2);
+			BinaryTree<StudentKey, Student > tree;
+			StudentKey key("R6734", "marco", "code117");
+			tree.add(0);
 			tree.add(3);
+			tree.add(8);
+			BSTNode <string>* right = tree.root->getRight();
 			Assert::IsNotNull(tree.root);
-			Assert::AreEqual(2, tree.root->getItem());
-			BSTNode<int>* right = tree.root->getRight();
+			BSTNode <string>* right = tree.root->getRight();
 			Assert::IsNotNull(right);
-			Assert::AreEqual(3, right->getItem());*/
+			Assert::AreEqual(right->add(key, data), right->getItem(0));
+			Assert::AreEqual(right->add(key, data), right->getItem(3));
+			Assert::AreEqual(right->add(key, data), right->getItem(8));
 		}
 
 		/*
@@ -72,8 +83,8 @@ namespace ADSCA2UnitTests
 
 		TEST_METHOD(TestCountOnEmpty)
 		{
-			BinaryTree<int> tree;
-			Assert::AreEqual(0, tree.count());
+			BinaryTree<string> tree;
+			Assert::AreEqual(nullptr, tree.count(nullptr));
 		}
 		/*
 		Test the count function for full tree
@@ -88,15 +99,10 @@ namespace ADSCA2UnitTests
 		TEST_METHOD(TestCountOnFullTree)
 		{
 			BinaryTree<int> tree;
-			tree.add(4);
-			tree.add(2);
-			tree.add(6);
-			tree.add(1);
-			tree.add(3);
-			tree.add(5);
-			tree.add(7);
-
-			Assert::AreEqual(7, tree.count());
+			StudentKey key("R1114", "jaskson", "code234" );
+			BSTNode <string>* right = tree.root->getRight();
+			BSTNode <string>* left = tree.root->getLeft();
+			Assert::AreEqual( , tree.count());
 		}
 
 		/*
@@ -111,26 +117,44 @@ namespace ADSCA2UnitTests
 
 		TEST_METHOD(TestRemoveItemNotPresent)
 		{
-			BinaryTree<int> tree;
-			tree.add(4);
-			tree.add(2);
-			tree.add(6);
+			BinaryTree<string> tree;
+			tree.add(0);
 			tree.add(1);
+			tree.add(2);
 			tree.add(3);
+			tree.add(4);
 			tree.add(5);
+			tree.add(6);
 			tree.add(7);
-			Assert::AreEqual(7, tree.count());
+			tree.add(8);
+			tree.add(9);
+			tree.add(10);
+			tree.add(11);
+			tree.add(12);
+			tree.add(13);
+			tree.add(14);
+			Assert::AreEqual(14, tree.count());
+			Assert::IsNotNull(tree.root);
+			Assert::IsNotNull(left);
+			Assert::IsNotNull(right);
 			tree.remove(8);
-			Assert::AreEqual(7, tree.count());
-			Assert::AreEqual(4, tree.root->getItem());
-			Assert::AreEqual(2, tree.root->getLeft()->getItem());
+			Assert::AreEqual(0, tree.root->getItem());
+			Assert::AreEqual(1, tree.root->getLeft()->getItem());
+			Assert::AreEqual(2, tree.root->getRight()->getItem());
+			Assert::AreEqual(3, tree.root->getLeft()->getItem());
+			Assert::AreEqual(4, tree.root->getRight()->getItem());
+			Assert::AreEqual(5, tree.root->getLeft()->getItem());
 			Assert::AreEqual(6, tree.root->getRight()->getItem());
-			BSTNode<int>* left = tree.root->getLeft();
-			BSTNode<int>* right = tree.root->getRight();
-			Assert::AreEqual(1, left->getLeft()->getItem());
-			Assert::AreEqual(3, left->getRight()->getItem());
-			Assert::AreEqual(5, right->getLeft()->getItem());
-			Assert::AreEqual(7, right->getRight()->getItem());
+			Assert::AreEqual(7, tree.root->getLeft()->getItem());
+			BSTNode<string>* left = tree.root->getLeft();
+			BSTNode<string>* right = tree.root->getRight();
+			Assert::AreEqual(8, left->getLeft()->getItem());
+			Assert::AreEqual(9, right->getRight()->getItem());
+			Assert::AreEqual(10, left->getLeft()->getItem());
+			Assert::AreEqual(11, right->getRight()->getItem());
+			Assert::AreEqual(12, left->getLeft()->getItem());
+			Assert::AreEqual(13, right->getRight()->getItem());
+			Assert::AreEqual(14, left->getLeft()->getItem());
 		}
 
 		/*
@@ -146,25 +170,44 @@ namespace ADSCA2UnitTests
 		TEST_METHOD(TestRemoveLeafNode)
 		{
 			BinaryTree<int> tree;
-			tree.add(4);
-			tree.add(2);
-			tree.add(6);
+			tree.add(0);
 			tree.add(1);
+			tree.add(2);
 			tree.add(3);
+			tree.add(4);
 			tree.add(5);
+			tree.add(6);
 			tree.add(7);
+			tree.add(8);
+			tree.add(9);
+			tree.add(10);
+			tree.add(11);
+			tree.add(12);
+			tree.add(13);
+			tree.add(14);
 			Assert::AreEqual(7, tree.count());
-			tree.remove(5);
-			Assert::AreEqual(6, tree.count());
-			Assert::AreEqual(4, tree.root->getItem());
-			Assert::AreEqual(2, tree.root->getLeft()->getItem());
+			Assert::IsNotNull(tree.root);
+			Assert::IsNotNull(left);
+			Assert::IsNotNull(right);
+			tree.remove(14);
+			Assert::AreEqual(0, tree.root->getItem());
+			Assert::AreEqual(1, tree.root->getLeft()->getItem());
+			Assert::AreEqual(2, tree.root->getRight()->getItem());
+			Assert::AreEqual(3, tree.root->getLeft()->getItem());
+			Assert::AreEqual(4, tree.root->getRight()->getItem());
+			Assert::AreEqual(5, tree.root->getLeft()->getItem());
 			Assert::AreEqual(6, tree.root->getRight()->getItem());
+			Assert::AreEqual(7, tree.root->getLeft()->getItem());
 			BSTNode<int>* left = tree.root->getLeft();
 			BSTNode<int>* right = tree.root->getRight();
-			Assert::AreEqual(1, left->getLeft()->getItem());
-			Assert::AreEqual(3, left->getRight()->getItem());
+			Assert::AreEqual(8, left->getLeft()->getItem());
+			Assert::AreEqual(9, right->getRight()->getItem());
+			Assert::AreEqual(10, left->getLeft()->getItem());
+			Assert::AreEqual(11, right->getRight()->getItem());
+			Assert::AreEqual(12, left->getLeft()->getItem());
+			Assert::AreEqual(13, right->getRight()->getItem());
 			Assert::IsNull(right->getLeft());
-			Assert::AreEqual(7, right->getRight()->getItem());
+			Assert::AreEqual(13, right->getRight()->getItem());
 		}
 
 		/*

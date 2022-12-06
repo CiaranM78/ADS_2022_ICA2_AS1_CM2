@@ -1,5 +1,7 @@
 #pragma once
 #include <vector>
+#include "../ADS_CA2_Tree/StudentKey.h"
+#include "../ADS_CA2_Tree/Student.h"
 
 
 template <class K, class V>
@@ -74,7 +76,7 @@ void BinaryTree<K, V>::add(K key, V item)
 		root->insert(key, item);
 	}
 }
-/*
+
 template <class K, class V>
 int BinaryTree<K, V>::count()
 {
@@ -82,7 +84,7 @@ int BinaryTree<K, V>::count()
 		return 0;
 	return root->count();
 }
-*/
+
 /*
 template <class K, class V>
 bool BinaryTree<K, V>::remove(K item)

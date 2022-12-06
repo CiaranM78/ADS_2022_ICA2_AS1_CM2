@@ -1,3 +1,8 @@
 ﻿  ADS_CA2_Tree.cpp
-D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\ADS_CA2_Tree.cpp(62,12): warning C4101: 'key': unreferenced local variable
-  ADS_CA2_Tree.vcxproj -> D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\x64\Debug\ADS_CA2_Tree.exe
+C:\Users\Ciaran\Documents\algorythm repository\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(8,2): error C2976: 'BSTNode': too few template arguments
+C:\Users\Ciaran\Documents\algorythm repository\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(5): message : see declaration of 'BSTNode'
+C:\Users\Ciaran\Documents\algorythm repository\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(28): message : see reference to class template instantiation 'BSTNode<T,V>' being compiled
+C:\Users\Ciaran\Documents\algorythm repository\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(9,2): error C2976: 'BSTNode': too few template arguments
+C:\Users\Ciaran\Documents\algorythm repository\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BSTNode.h(5): message : see declaration of 'BSTNode'
+  CSV.cpp
+  Generating Code...
