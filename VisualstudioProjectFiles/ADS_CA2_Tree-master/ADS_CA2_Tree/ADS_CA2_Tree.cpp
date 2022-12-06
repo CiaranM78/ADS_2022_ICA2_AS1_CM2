@@ -10,7 +10,9 @@
 #include "BinaryTree.h"
 #include "String"
 #include "Customer.h"
-
+#include "Date.h"
+#include "Student.h"
+#include "StudentKey.h"
 
 using namespace std;
 
@@ -23,14 +25,7 @@ void display(CSV& Pinfo)
 
 
 
-struct Personalinfo
-{
-    string user_id;
-    string surname;
-    string postcode;
-    size_t key;
 
-};
 
 
 
@@ -63,7 +58,7 @@ void demoSimpleHash() {
 
 void readCsv()
 {
-    BinaryTree<int, Personalinfo> tree;
+    BinaryTree<Student, Student> tree;
     size_t key;
     string line;
     ifstream fin("Text.txt");
@@ -76,7 +71,7 @@ void readCsv()
         {
             getline(fin, line);
             //cout << line << endl;
-            Personalinfo Pinfo;
+            Student Pinfo;
             vector<string> data;
             string field = "";
             bool quoteOpen = false;

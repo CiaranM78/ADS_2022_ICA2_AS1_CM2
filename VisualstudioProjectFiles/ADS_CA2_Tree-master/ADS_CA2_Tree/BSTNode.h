@@ -21,7 +21,7 @@ public:
 	BSTNode<T, V>* getRight();
 	void setLeft(BSTNode<T, V>* l);
 	void setRight(BSTNode<T, V>* r);
-	T getItem();
+	V getItem();
 	~BSTNode();
 	
 
@@ -34,7 +34,7 @@ BSTNode<T, V>::~BSTNode()
 	delete right;
 }
 template <class T, class V>
-T BSTNode<T, V>::getItem()
+V BSTNode<T, V>::getItem()
 {
 	return this->data;
 }
