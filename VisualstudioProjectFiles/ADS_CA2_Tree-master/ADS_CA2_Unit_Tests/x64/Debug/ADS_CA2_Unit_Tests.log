@@ -1,0 +1,168 @@
+﻿  ADS_CA2_Unit_Tests.cpp
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(10,7): error C2143: syntax error: missing ';' before '<'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(26): message : see reference to class template instantiation 'BinaryTree<K,V>' being compiled
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(10,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(10,10): error C2238: unexpected token(s) preceding ';'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(31,27): error C2039: 'root': is not a member of 'BinaryTree<StudentKey,Student>'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(26): message : see declaration of 'BinaryTree<StudentKey,Student>'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(31,1): error C2672: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::IsNotNull': no matching overloaded function found
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\UnitTest\include\CppUnitTestAssert.h(271,36): message : could be 'void Microsoft::VisualStudio::CppUnitTestFramework::Assert::IsNotNull(const T *,const wchar_t *,const Microsoft::VisualStudio::CppUnitTestFramework::__LineInfo *)'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(32,21): error C2039: 'root': is not a member of 'BinaryTree<StudentKey,Student>'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(26): message : see declaration of 'BinaryTree<StudentKey,Student>'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(32,14): error C2512: 'Student': no appropriate default constructor available
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\Student.h(11,7): message : see declaration of 'Student'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(75,4): error C2976: 'BinaryTree': too few template arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(75,20): error C2133: 'tree': unknown size
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(75,20): error C2512: 'BinaryTree': no appropriate default constructor available
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7,1): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(76,29): error C2039: 'count': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(76,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(90,4): error C2976: 'BinaryTree': too few template arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(90,20): error C2133: 'tree': unknown size
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(90,20): error C2512: 'BinaryTree': no appropriate default constructor available
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7,1): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(91,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(92,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(93,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(94,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(95,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(96,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(97,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(99,29): error C2039: 'count': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(99,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(114,4): error C2976: 'BinaryTree': too few template arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(114,20): error C2133: 'tree': unknown size
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(114,20): error C2512: 'BinaryTree': no appropriate default constructor available
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7,1): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(115,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(116,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(117,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(118,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(119,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(120,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(121,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(122,29): error C2039: 'count': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(122,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(123,9): error C2039: 'remove': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(124,29): error C2039: 'count': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(124,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(125,29): error C2039: 'root': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(125,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(126,29): error C2039: 'root': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(126,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(127,29): error C2039: 'root': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(127,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(128,4): error C2065: 'BSTNode': undeclared identifier
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(128,12): error C2062: type 'int' unexpected
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(129,4): error C2065: 'BSTNode': undeclared identifier
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(129,12): error C2062: type 'int' unexpected
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(130,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(131,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(132,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(133,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(148,4): error C2976: 'BinaryTree': too few template arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(148,20): error C2133: 'tree': unknown size
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(148,20): error C2512: 'BinaryTree': no appropriate default constructor available
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7,1): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(149,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(150,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(151,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(152,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(153,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(154,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(155,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(156,29): error C2039: 'count': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(156,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(157,9): error C2039: 'remove': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(158,29): error C2039: 'count': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(158,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(159,29): error C2039: 'root': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(159,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(160,29): error C2039: 'root': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(160,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(161,29): error C2039: 'root': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(161,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(162,4): error C2065: 'BSTNode': undeclared identifier
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(162,12): error C2062: type 'int' unexpected
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(163,4): error C2065: 'BSTNode': undeclared identifier
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(163,12): error C2062: type 'int' unexpected
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(164,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(165,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(166,1): error C2672: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::IsNull': no matching overloaded function found
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\UnitTest\include\CppUnitTestAssert.h(265,36): message : could be 'void Microsoft::VisualStudio::CppUnitTestFramework::Assert::IsNull(const T *,const wchar_t *,const Microsoft::VisualStudio::CppUnitTestFramework::__LineInfo *)'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(167,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(184,4): error C2976: 'BinaryTree': too few template arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(184,20): error C2133: 'tree': unknown size
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(184,20): error C2512: 'BinaryTree': no appropriate default constructor available
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7,1): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(185,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(186,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(187,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(188,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(189,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(190,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(191,1): error C2660: 'BinaryTree<K,V>::add': function does not take 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(12,7): message : see declaration of 'BinaryTree<K,V>::add'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(192,29): error C2039: 'count': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(192,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(193,9): error C2039: 'remove': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(194,29): error C2039: 'count': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(194,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(195,29): error C2039: 'root': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(195,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(196,29): error C2039: 'root': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(196,1): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(197,29): error C2039: 'root': is not a member of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Tree\BinaryTree.h(7): message : see declaration of 'BinaryTree'
+D:\GitRepos\AlgorythmCAArnas-Ciaran\VisualstudioProjectFiles\ADS_CA2_Tree-master\ADS_CA2_Unit_Tests\ADS_CA2_Unit_Tests.cpp(197,1): fatal  error C1003: error count exceeds 100; stopping compilation

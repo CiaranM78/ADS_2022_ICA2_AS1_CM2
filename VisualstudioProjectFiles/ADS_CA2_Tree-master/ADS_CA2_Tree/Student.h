@@ -13,7 +13,7 @@ class Student
 private:
 
     string user_id;
-    int current_ranking;
+    string current_ranking;
     string first_name;
     string surname;
     string gender;
@@ -26,27 +26,27 @@ private:
     string lastlogin;
     string lastlogintime;
     string joined_on;
-    int account_credit;
+    string account_credit;
 
     
 
 
 public:
 
-    Student(string user_id, int current_ranking, string first_name) :
+    Student(string user_id, string current_ranking, string first_name) :
         user_id(user_id), current_ranking(current_ranking), first_name(first_name), surname(""),
         gender(""), DOB(DOB), email(""),
         phone(""), postcode(""), address(""),
         country(""), lastlogin(""), lastlogintime(""),
-        joined_on(""), account_credit(0)
+        joined_on(""), account_credit("")
     {
 
     }
 
-    Student(string user_id, int current_ranking, string first_name, string surname,
+    Student(string user_id, string current_ranking, string first_name, string surname,
         string gender, string DOB, string email,
         string phone, string postcode, string address, string country, string lastlogin, string lastlogintime, 
-        string joined_on, int account_credit) :
+        string joined_on, string account_credit) :
         user_id(user_id), current_ranking(current_ranking), first_name(first_name), surname(surname),
         gender(gender), DOB(DOB), email(email),
         phone(phone), postcode(postcode), address(address),
@@ -57,7 +57,7 @@ public:
     }
 
     string getuser_id() const { return this->user_id; }
-    int getcurrent_ranking() const { return this->current_ranking; }
+    string getcurrent_ranking() const { return this->current_ranking; }
     string getfirst_name() const { return this->first_name; }
     string getsurname() const { return this->surname; }
     string getgender() const { return this->gender; }
@@ -70,7 +70,7 @@ public:
     string getlastlogin() const { return this->lastlogin; }
     string getlastlogintime() const { return this->lastlogintime; }
     string getjoined_on() const { return this->joined_on; }
-    int getaccount_credit() const { return this->account_credit; }
+    string getaccount_credit() const { return this->account_credit; }
 
 
 

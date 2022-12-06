@@ -98,7 +98,7 @@ void readCsv()
                 data.push_back(field);
             }
             
-            Student *Pinfo = new Student(data[0], stoi(data[1]), data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11], data[12], data[13], stoi(data[14]));
+            Student *Pinfo = new Student(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11], data[12], data[13], data[14]);
             StudentKey key(data[0], data[3], data[8]);
             // Hashing the variables stored
             // Hashing the user_id

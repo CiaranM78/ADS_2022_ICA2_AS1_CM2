@@ -25,7 +25,7 @@ namespace ADSCA2UnitTests
 		{
 			BinaryTree<StudentKey, Student> tree;
 			StudentKey key("j1234", "smith", "code123");
-			Student std("j1234", 100, "john");
+			Student std("j1234", "billybob", "john");
 			tree.add(key, std);
 
 			Assert::IsNotNull(tree.root);
