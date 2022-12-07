@@ -4,8 +4,8 @@
 #include <iostream>
 #include <string>
 #include "Date.h"
-#include "TNode.h"
-#include "BSTNode.h"
+
+
 
 
 using namespace std;
@@ -34,7 +34,7 @@ private:
 
 
 public:
-
+    Student(){}
     Student(string user_id, string current_ranking, string first_name) :
         user_id(user_id), current_ranking(current_ranking), first_name(first_name), surname(""),
         gender(""), DOB(DOB), email(""),

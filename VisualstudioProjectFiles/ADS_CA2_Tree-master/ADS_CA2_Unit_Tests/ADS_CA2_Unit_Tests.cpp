@@ -4,8 +4,8 @@
 #include "../ADS_CA2_Tree/BinaryTree.h"
 #include "../ADS_CA2_Tree/StudentKey.h"
 #include "../ADS_CA2_Tree/Student.h"
-#include "../ADS_CA2_Tree/TNode.h"
-#include "../ADS_CA2_Tree/BSTNode.h"
+//#include "../ADS_CA2_Tree/TNode.h"
+//#include "../ADS_CA2_Tree/BSTNode.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -32,9 +32,9 @@ namespace ADSCA2UnitTests
 			tree.add(key, std);
 
 			Assert::IsNotNull(tree.root);
-			Student s = tree.root->getItem();
+			Student s = tree.root->getData();
 
-			string id = "j1234";
+			string id = "j12347";
 			Assert::AreEqual(s.getuser_id(), id);
 		}
 
@@ -42,9 +42,40 @@ namespace ADSCA2UnitTests
 		This test ensures a node is created on the left branch
 		when value is less than root.
 		*/
+
+
+
 		TEST_METHOD(TestAddToRootLeft)
 		{
-			BinaryTree<StudentKey, Student > tree;
+			/*
+			BinaryTree<StudentKey, Student> tree;
+			StudentKey key("j1234", "smith", "code123");
+			StudentKey key2("joe", "momma", "code69");
+			Student std("j1234", "billybob", "john", "j1234", "billybob", "john", "j1234", "billybob", "john", "j1234", "billybob", "john", "j1234", "billybob", "john");
+			Student std1("jfadsf", "bisdfadb", "jofdasfan", "j1dfasdfa4", "billafsdfa", "jfasdf", "j1234", "billybob", "john", "j1234", "billybob", "john", "j1234", "billybob", "john");
+			tree.add(key, std);
+			tree.add(key2, std1);
+
+
+			Assert::IsNotNull(tree.root);
+			//left = tree.root->getLeft();
+			///////////////////////
+
+
+
+			//Assert::AreEqual(2, tree.root->getData());
+
+			//Assert::IsNotNull(left);
+			//Assert::AreEqual(1, left->getItem());
+
+
+
+
+
+
+
+
+			/*BinaryTree<StudentKey, Student > tree;
 			StudentKey key("R7284", "robinson", "code575");
 			tree.add(0);
 			tree.add(3);
@@ -55,7 +86,7 @@ namespace ADSCA2UnitTests
 			Assert::IsNotNull(left);
 			Assert::AreEqual(left->add(key, data), left->getItem(0));
 			Assert::AreEqual(left->add(key, data), left->getItem(3));
-			Assert::AreEqual(left->add(key, data), left->getItem(8));
+			Assert::AreEqual(left->add(key, data), left->getItem(8));*/
 		}
 		/*
 		This test ensures a node is created on the right branch
@@ -63,7 +94,7 @@ namespace ADSCA2UnitTests
 		*/
 		TEST_METHOD(TestAddToRootRight)
 		{
-			BinaryTree<StudentKey, Student > tree;
+			/*BinaryTree<StudentKey, Student > tree;
 			StudentKey key("R6734", "marco", "code117");
 			tree.add(0);
 			tree.add(3);
@@ -74,7 +105,7 @@ namespace ADSCA2UnitTests
 			Assert::IsNotNull(right);
 			Assert::AreEqual(right->add(key, data), right->getItem(0));
 			Assert::AreEqual(right->add(key, data), right->getItem(3));
-			Assert::AreEqual(right->add(key, data), right->getItem(8));
+			Assert::AreEqual(right->add(key, data), right->getItem(8));*/
 		}
 
 		/*
@@ -83,8 +114,8 @@ namespace ADSCA2UnitTests
 
 		TEST_METHOD(TestCountOnEmpty)
 		{
-			BinaryTree<string> tree;
-			Assert::AreEqual(nullptr, tree.count(nullptr));
+			/*BinaryTree<string> tree;
+			Assert::AreEqual(nullptr, tree.count(nullptr));*/
 		}
 		/*
 		Test the count function for full tree
@@ -98,11 +129,11 @@ namespace ADSCA2UnitTests
 
 		TEST_METHOD(TestCountOnFullTree)
 		{
-			BinaryTree<int> tree;
+			/*BinaryTree<int> tree;
 			StudentKey key("R1114", "jaskson", "code234" );
 			BSTNode <string>* right = tree.root->getRight();
 			BSTNode <string>* left = tree.root->getLeft();
-			Assert::AreEqual( , tree.count());
+			Assert::AreEqual( , tree.count());*/
 		}
 
 		/*
@@ -117,7 +148,7 @@ namespace ADSCA2UnitTests
 
 		TEST_METHOD(TestRemoveItemNotPresent)
 		{
-			BinaryTree<string> tree;
+			/*BinaryTree<string> tree;
 			tree.add(0);
 			tree.add(1);
 			tree.add(2);
@@ -154,7 +185,7 @@ namespace ADSCA2UnitTests
 			Assert::AreEqual(11, right->getRight()->getItem());
 			Assert::AreEqual(12, left->getLeft()->getItem());
 			Assert::AreEqual(13, right->getRight()->getItem());
-			Assert::AreEqual(14, left->getLeft()->getItem());
+			Assert::AreEqual(14, left->getLeft()->getItem());*/
 		}
 
 		/*
@@ -169,7 +200,7 @@ namespace ADSCA2UnitTests
 
 		TEST_METHOD(TestRemoveLeafNode)
 		{
-			BinaryTree<int> tree;
+			/*BinaryTree<int> tree;
 			tree.add(0);
 			tree.add(1);
 			tree.add(2);
@@ -207,7 +238,7 @@ namespace ADSCA2UnitTests
 			Assert::AreEqual(12, left->getLeft()->getItem());
 			Assert::AreEqual(13, right->getRight()->getItem());
 			Assert::IsNull(right->getLeft());
-			Assert::AreEqual(13, right->getRight()->getItem());
+			Assert::AreEqual(13, right->getRight()->getItem());*/
 		}
 
 		/*
@@ -224,7 +255,7 @@ namespace ADSCA2UnitTests
 
 		TEST_METHOD(TestRemoveNodeWithOneChild)
 		{
-			BinaryTree<int> tree;
+			/*BinaryTree<int> tree;
 			tree.add(4);
 			tree.add(2);
 			tree.add(6);
@@ -242,7 +273,7 @@ namespace ADSCA2UnitTests
 			BSTNode<int>* right = tree.root->getRight();
 			Assert::AreEqual(1, left->getLeft()->getItem());
 			Assert::AreEqual(5, right->getLeft()->getItem());
-			Assert::AreEqual(8, right->getRight()->getItem());
+			Assert::AreEqual(8, right->getRight()->getItem());*/
 		}
 		/*
 		Test the remove function to try and remove a leaf node
@@ -256,7 +287,7 @@ namespace ADSCA2UnitTests
 
 		TEST_METHOD(TestRemoveNodeWithTwoChildren)
 		{
-			BinaryTree<int> tree;
+			/*BinaryTree<int> tree;
 			tree.add(4);
 			tree.add(2);
 			tree.add(6);
@@ -275,7 +306,7 @@ namespace ADSCA2UnitTests
 			Assert::AreEqual(1, left->getLeft()->getItem());
 			Assert::IsNull(left->getRight());
 			Assert::AreEqual(5, right->getLeft()->getItem());
-			Assert::AreEqual(7, right->getRight()->getItem());
+			Assert::AreEqual(7, right->getRight()->getItem());*/
 		}
 
 		/*
@@ -309,7 +340,7 @@ namespace ADSCA2UnitTests
 
 		TEST_METHOD(TestRemoveNodeWithMultipleChildren)
 		{
-			BinaryTree<int> tree;
+			/*BinaryTree<int> tree;
 			tree.add(8);
 			tree.add(4);
 			tree.add(12);
@@ -332,7 +363,7 @@ namespace ADSCA2UnitTests
 			tree.remove(12);
 			Assert::AreEqual(14, tree.count());
 			Assert::AreEqual(13, tree.root->getRight()->getItem());
-			Assert::IsNull(tree.root->getRight()->getRight()->getLeft());
+			Assert::IsNull(tree.root->getRight()->getRight()->getLeft());*/
 		}
 
 
