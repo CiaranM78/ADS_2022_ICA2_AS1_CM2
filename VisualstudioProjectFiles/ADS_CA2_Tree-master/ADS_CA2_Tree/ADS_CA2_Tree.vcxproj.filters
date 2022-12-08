@@ -61,5 +61,8 @@
     <Text Include="..\..\data_1000.txt">
       <Filter>Source Files</Filter>
     </Text>
+    <Text Include="UnitTests.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

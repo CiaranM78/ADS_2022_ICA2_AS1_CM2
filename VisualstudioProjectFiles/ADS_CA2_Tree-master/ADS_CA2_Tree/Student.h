@@ -44,7 +44,7 @@ public:
     {
 
     }
-
+    
     Student(string user_id, string current_ranking, string first_name, string surname,
         string gender, string DOB, string email,
         string phone, string postcode, string address, string country, string lastlogin, string lastlogintime, 
@@ -57,7 +57,7 @@ public:
     {
 
     }
-
+    
     string getuser_id() const { return this->user_id; }
     string getcurrent_ranking() const { return this->current_ranking; }
     string getfirst_name() const { return this->first_name; }

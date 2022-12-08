@@ -5,7 +5,7 @@
 /*
 recursive function to display a binary tree
 */
-template <class T, class V>
+template <typename T, typename V>
 void printBT(const std::string& prefix, TNode<T, V>* node, bool isLeft)
 {
 	if (node != nullptr)

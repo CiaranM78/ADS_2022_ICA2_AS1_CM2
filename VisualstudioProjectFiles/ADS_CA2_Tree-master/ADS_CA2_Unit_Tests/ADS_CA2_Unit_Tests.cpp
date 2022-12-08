@@ -6,6 +6,8 @@
 #include "../ADS_CA2_Tree/Student.h"
 //#include "../ADS_CA2_Tree/TNode.h"
 //#include "../ADS_CA2_Tree/BSTNode.h"
+#include "../ADS_CA2_Tree/Util.h"
+
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -14,22 +16,20 @@ namespace ADSCA2UnitTests
 	TEST_CLASS(ADSCA2UnitTests)
 	{
 	public:
-		
-		TEST_METHOD(TestMethod1)
-		{
-		}
-
 		/*
 			This test ensures a node is created at the root when
 			an element is added to an empty binary tree
 		*/
 
+
+
+
 		TEST_METHOD(TestAddToEmptyTree)
 		{
-			BinaryTree<StudentKey, Student> tree;
-			StudentKey key("j1234", "smith", "code123");
-			Student std("j1234", "billybob", "john");
-			tree.add(key, std);
+			TNode<StudentKey, Student> tree;
+			StudentKey key1("j1234", "smith", "code123");
+			Student std1("j1234", "billybob", "john");
+			tree.add(key1, std1);
 
 			Assert::IsNotNull(tree.root);
 			Student s = tree.root->getData();
@@ -41,10 +41,10 @@ namespace ADSCA2UnitTests
 
 		TEST_METHOD(TestAddToEmptyTreefail)
 		{
-			BinaryTree<StudentKey, Student> tree;
-			StudentKey key("j1234", "smith", "code123");
-			Student std("j1234", "billybob", "john");
-			tree.add(key, std);
+			TNode<StudentKey, Student> tree;
+			StudentKey key1("j1234", "smith", "code123");
+			Student std1("j1234", "billybob", "john");
+			tree.add(key1, std1);
 
 			Assert::IsNotNull(tree.root);
 			Student s = tree.root->getData();
@@ -63,26 +63,37 @@ namespace ADSCA2UnitTests
 		TEST_METHOD(TestAddToRootLeft)
 		{
 			
-			BinaryTree<StudentKey, Student> tree;
-			StudentKey key("j1234", "smith", "code123");
-			StudentKey key2("", "momma", "code69");
-			Student std("j1234", "billybob", "john", "j1234", "billybob", "john", "j1234", "billybob", "john", "j1234", "billybob", "john", "j1234", "billybob", "john");
-			Student std1("jfadsf", "bisdfadb", "jofdasfan", "j1dfasdfa4", "billafsdfa", "jfasdf", "j1234", "billybob", "john", "j1234", "billybob", "john", "j1234", "billybob", "john");
-			tree.add(key, std);
-			tree.add(key2, std1);
-			Student s = tree.root->getData();
+			TNode<StudentKey, Student> tree;
+			StudentKey key1("j1234", "smith", "code123");
+			StudentKey key2("4321jf", "momma", "code69");
+			StudentKey key4("j123g", "smitfg", "cod");
+			Student std1("j1234", "billybob", "john");
+			Student std2("jfadsf", "bisdfadb", "jofdasfan");
+			Student std3("jfadadsfaf", "bisdfdsfdfasdfadfdb", "jofdasfan");
+			tree.add(key1, std1);
+			tree.add(key2, std2);
+			//tree.add(key4, std3);
+			Student rootnode = tree.root->getData();
 			Assert::IsNotNull(tree.root);
-			string id = "j4321";
-			Assert::AreEqual(s.getuser_id(), id);
+			string id1 = "j1234";
+			string id2 = "jfadsf";
+			Assert::AreEqual(rootnode.getuser_id(), id1);
+			TNode<StudentKey,Student>* left = tree.root->getLeft();
+
+			Student x = left->getData();
 			
-
-
+			
+			Assert::IsNotNull(left);
+			TNode<StudentKey, Student>* right = tree.root->getRight();
+			//Assert::IsNotNull(right);
+			
+			Assert::AreEqual(x.getuser_id(), id2);
+			
+		
+			//Assert::AreEqual(key2, left->getData());
+			
 			//Assert::IsNotNull(left);
 			//Assert::AreEqual(1, left->getItem());
-
-
-
-
 
 
 
@@ -95,10 +106,6 @@ namespace ADSCA2UnitTests
 
 			//Assert::IsNotNull(left);
 			//Assert::AreEqual(1, left->getItem());
-
-
-
-
 
 
 
@@ -122,18 +129,22 @@ namespace ADSCA2UnitTests
 		*/
 		TEST_METHOD(TestAddToRootRight)
 		{
-			/*BinaryTree<StudentKey, Student > tree;
-			StudentKey key("R6734", "marco", "code117");
-			tree.add(0);
-			tree.add(3);
-			tree.add(8);
-			BSTNode <string>* right = tree.root->getRight();
+			TNode<StudentKey, Student> tree;
+			StudentKey key1("j1234", "smith", "code123");
+			StudentKey key2("j123g", "smitfg", "cod");
+			Student std1("j1234", "billybob", "john");
+			Student std2("jfadadsfaf", "bisdfdsfdfasdfadfdb", "jofdasfan");
+			tree.add(key1, std1);
+			tree.add(key2, std2);
+			Student rootnode = tree.root->getData();
 			Assert::IsNotNull(tree.root);
-			BSTNode <string>* right = tree.root->getRight();
+			string id1 = "j1234";
+			string id2 = "jfadadsfaf";
+			Assert::AreEqual(rootnode.getuser_id(), id1);
+			TNode<StudentKey, Student>* right = tree.root->getRight();
 			Assert::IsNotNull(right);
-			Assert::AreEqual(right->add(key, data), right->getItem(0));
-			Assert::AreEqual(right->add(key, data), right->getItem(3));
-			Assert::AreEqual(right->add(key, data), right->getItem(8));*/
+			Student x = right->getData();
+			Assert::AreEqual(x.getuser_id(), id2);
 		}
 
 		/*
@@ -142,8 +153,8 @@ namespace ADSCA2UnitTests
 
 		TEST_METHOD(TestCountOnEmpty)
 		{
-			/*BinaryTree<string> tree;
-			Assert::AreEqual(nullptr, tree.count(nullptr));*/
+			TNode<StudentKey, Student> tree;
+			Assert::AreEqual(0, tree.count());
 		}
 		/*
 		Test the count function for full tree
@@ -157,11 +168,20 @@ namespace ADSCA2UnitTests
 
 		TEST_METHOD(TestCountOnFullTree)
 		{
-			/*BinaryTree<int> tree;
-			StudentKey key("R1114", "jaskson", "code234" );
-			BSTNode <string>* right = tree.root->getRight();
-			BSTNode <string>* left = tree.root->getLeft();
-			Assert::AreEqual( , tree.count());*/
+			TNode<StudentKey, Student> tree;
+			StudentKey key1("j1234", "smith", "code123");
+			StudentKey key2("4321jf", "momma", "code69");
+			StudentKey key3("j123g", "smitfg", "cod");
+			Student std1("j1234", "billybob", "john");
+			Student std2("jfadsf", "bisdfadb", "jofdasfan");
+			Student std3("jfadadsfaf", "bisdfdsfdfasdfadfdb", "jofdasfan");
+			tree.add(key1, std1);
+			tree.add(key2, std2);
+			tree.add(key3, std3);
+
+
+			Assert::AreEqual(3, tree.count());
+
 		}
 
 		/*
@@ -176,45 +196,50 @@ namespace ADSCA2UnitTests
 
 		TEST_METHOD(TestRemoveItemNotPresent)
 		{
-			/*BinaryTree<string> tree;
-			tree.add(0);
-			tree.add(1);
-			tree.add(2);
-			tree.add(3);
-			tree.add(4);
-			tree.add(5);
-			tree.add(6);
-			tree.add(7);
-			tree.add(8);
-			tree.add(9);
-			tree.add(10);
-			tree.add(11);
-			tree.add(12);
-			tree.add(13);
-			tree.add(14);
-			Assert::AreEqual(14, tree.count());
+			//might be issues with this
+			// key4 not getting deleted properly
+
+			TNode<StudentKey, Student> tree;
+			StudentKey key1("j1234", "smith", "code123");
+			StudentKey key2("4321jf", "momma", "code69");
+			StudentKey key3("j123g", "smitfg", "cod");
+			StudentKey key4("faskdfa", "sfdasf", "cfdasf");
+			Student std1("j1234", "billybob", "john");
+			Student std2("jfadsf", "bisdfadb", "jofdasfan");
+			Student std3("jfadadsfaf22222", "bisdfdsfdfasdfadfdb", "jofdasfan");
+			Student std4("jfadadsfaf6", "bisdfdsfdfasdfadfdb", "jofdasfan");
+			tree.add(key1, std1);
+			tree.add(key2, std2);
+			tree.add(key3, std3);
+			Assert::AreEqual(3, tree.count());
+			tree.remove(key4);
+			Assert::AreEqual(3, tree.count());
+
+			
+
+			//testing if root doesn't get deleted had issues with this
+			Student rootnode = tree.root->getData();
 			Assert::IsNotNull(tree.root);
-			Assert::IsNotNull(left);
-			Assert::IsNotNull(right);
-			tree.remove(8);
-			Assert::AreEqual(0, tree.root->getItem());
-			Assert::AreEqual(1, tree.root->getLeft()->getItem());
-			Assert::AreEqual(2, tree.root->getRight()->getItem());
-			Assert::AreEqual(3, tree.root->getLeft()->getItem());
-			Assert::AreEqual(4, tree.root->getRight()->getItem());
-			Assert::AreEqual(5, tree.root->getLeft()->getItem());
-			Assert::AreEqual(6, tree.root->getRight()->getItem());
-			Assert::AreEqual(7, tree.root->getLeft()->getItem());
-			BSTNode<string>* left = tree.root->getLeft();
-			BSTNode<string>* right = tree.root->getRight();
-			Assert::AreEqual(8, left->getLeft()->getItem());
-			Assert::AreEqual(9, right->getRight()->getItem());
-			Assert::AreEqual(10, left->getLeft()->getItem());
-			Assert::AreEqual(11, right->getRight()->getItem());
-			Assert::AreEqual(12, left->getLeft()->getItem());
-			Assert::AreEqual(13, right->getRight()->getItem());
-			Assert::AreEqual(14, left->getLeft()->getItem());*/
+			string id1 = "j1234";
+			Assert::AreEqual(rootnode.getuser_id(), id1);
+			//test check data in the right node
+			string idRight = "jfadadsfaf22222";
+			TNode<StudentKey, Student>* right = tree.root->getRight();
+			Student r = right->getData();
+			Assert::AreEqual(r.getuser_id(), idRight);
+			//test check data in the left node
+			string idLeft = "jfadsf";
+			TNode<StudentKey, Student>* left = tree.root->getLeft();
+			Student l = left->getData();
+			Assert::AreEqual(l.getuser_id(), idLeft);
+			
+
+
+
+
 		}
+
+
 
 		/*
 		Test the remove function to try and remove a leaf node
@@ -228,45 +253,66 @@ namespace ADSCA2UnitTests
 
 		TEST_METHOD(TestRemoveLeafNode)
 		{
-			/*BinaryTree<int> tree;
-			tree.add(0);
-			tree.add(1);
-			tree.add(2);
-			tree.add(3);
-			tree.add(4);
-			tree.add(5);
-			tree.add(6);
-			tree.add(7);
-			tree.add(8);
-			tree.add(9);
-			tree.add(10);
-			tree.add(11);
-			tree.add(12);
-			tree.add(13);
-			tree.add(14);
-			Assert::AreEqual(7, tree.count());
+			TNode<StudentKey, Student> tree;
+			StudentKey key1("WBC88XPE6LP", "Burks", "6723 EV");
+			StudentKey key2("RDS11RXM7WY", "Morse", "08450");
+			StudentKey key5("FNO15QZA3TB", "Francis", "14719");
+			StudentKey key3("j1", "smfg", "cd");
+			StudentKey key4("fdfa", "sfsf", "casf");
+			Student std1("j1234", "billybob", "john");
+			Student std2("jfadsf", "bisdfadb", "jofdasfan");
+			Student std3("jfad", "bisdfdsfdfb", "jon");
+			Student std4("jfadaf6", "bisdfdsadfdb", "joan");
+			Student std5("FNO15QZA3TB", "bisdfdssdfadfdb", "sfan");
+			tree.add(key1, std1);
+			tree.add(key2, std2);
+			tree.add(key3, std3);
+			tree.add(key4, std4);
+			tree.add(key5, std5);
+			Assert::AreEqual(5, tree.count());
+		    tree.remove(key5);
+			Assert::AreEqual(4, tree.count());
+			/*Assert::AreEqual(4, tree.count());
+			tree.remove(key4);
+			Assert::AreEqual(3, tree.count());*/
+
+
+
+			//testing if root doesn't get deleted had issues with this
+			//Student rootnode = tree.root->getData();
 			Assert::IsNotNull(tree.root);
-			Assert::IsNotNull(left);
-			Assert::IsNotNull(right);
-			tree.remove(14);
-			Assert::AreEqual(0, tree.root->getItem());
-			Assert::AreEqual(1, tree.root->getLeft()->getItem());
-			Assert::AreEqual(2, tree.root->getRight()->getItem());
-			Assert::AreEqual(3, tree.root->getLeft()->getItem());
-			Assert::AreEqual(4, tree.root->getRight()->getItem());
-			Assert::AreEqual(5, tree.root->getLeft()->getItem());
-			Assert::AreEqual(6, tree.root->getRight()->getItem());
-			Assert::AreEqual(7, tree.root->getLeft()->getItem());
-			BSTNode<int>* left = tree.root->getLeft();
-			BSTNode<int>* right = tree.root->getRight();
-			Assert::AreEqual(8, left->getLeft()->getItem());
-			Assert::AreEqual(9, right->getRight()->getItem());
-			Assert::AreEqual(10, left->getLeft()->getItem());
-			Assert::AreEqual(11, right->getRight()->getItem());
-			Assert::AreEqual(12, left->getLeft()->getItem());
-			Assert::AreEqual(13, right->getRight()->getItem());
+			//string id1 = "j1234";
+			//Assert::AreEqual(rootnode.getuser_id(), id1);
+			////test check data in the right node
+			//string idRight = "jfadadsfaf22222";
+			TNode<StudentKey, Student>* right = tree.root->getRight();
 			Assert::IsNull(right->getLeft());
-			Assert::AreEqual(13, right->getRight()->getItem());*/
+
+
+			//Student r = right->getLeft()->getData();
+			//string rightleftleafid = "FNO15QZA3TB5";
+		    //Assert::AreEqual(r.getuser_id(), rightleftleafid);
+
+
+
+			//Assert::AreEqual(r.getuser_id(), idRight);
+			////test check data in the left node
+			//string idLeft = "jfadsf";
+			//TNode<StudentKey, Student>* left = tree.root->getLeft();
+			//Student l = left->getData();
+			//Assert::AreEqual(l.getuser_id(), idLeft);
+
+			/*
+		Test the remove function to try and remove a leaf node
+		to test this we will use the following tree
+		 key1
+		/   \
+		2    Key2
+	   / \   / \
+	   1 3 Key3  7
+
+
+
 		}
 
 		/*
@@ -280,28 +326,34 @@ namespace ADSCA2UnitTests
 				\
 				 8
 		*/
-
+		}
 		TEST_METHOD(TestRemoveNodeWithOneChild)
 		{
-			/*BinaryTree<int> tree;
-			tree.add(4);
-			tree.add(2);
-			tree.add(6);
-			tree.add(1);
-			tree.add(5);
-			tree.add(7);
-			tree.add(8);
-			Assert::AreEqual(7, tree.count());
-			tree.remove(7);
-			Assert::AreEqual(6, tree.count());
-			Assert::AreEqual(4, tree.root->getItem());
-			Assert::AreEqual(2, tree.root->getLeft()->getItem());
-			Assert::AreEqual(6, tree.root->getRight()->getItem());
-			BSTNode<int>* left = tree.root->getLeft();
-			BSTNode<int>* right = tree.root->getRight();
-			Assert::AreEqual(1, left->getLeft()->getItem());
-			Assert::AreEqual(5, right->getLeft()->getItem());
-			Assert::AreEqual(8, right->getRight()->getItem());*/
+			TNode<StudentKey, Student> tree;
+			StudentKey key1("WBC88XPE6LP", "Burks", "6723 EV");
+			StudentKey key2("RDS11RXM7WY", "Morse", "08450");
+			StudentKey key5("FNO15QZA3TB", "Francis", "14719");
+			StudentKey key6("TEE62QJX2SJ", "Mccarty", "165810");
+			StudentKey key7("KMW31DFX1GN", "Newman", "4266");
+			Student std1("j1234", "billybob", "john");
+			Student std2("jfadsf", "bisdfadb", "jofdasfan");
+			Student std5("FNO15QZA3TB", "bisdfdssdfadfdb", "sfan");
+			Student std6("TEE62QJX2SJ", "bisdfdssdfadfdb", "sfan");
+			Student std7("KMW31DFX1GN", "bisdfdssdfadfdb", "sfan");
+			tree.add(key1, std1);
+			tree.add(key2, std2);
+			tree.add(key5, std5);
+			tree.add(key6, std6);
+			tree.add(key7, std7);
+			tree.remove(key6);
+			Assert::IsNotNull(tree.root);
+			TNode<StudentKey, Student>* right = tree.root->getRight();
+			Assert::IsNull(right->getRight()->getRight());
+			Student rightmostleaf = right->getRight()->getData();
+			string rightmostnode = "KMW31DFX1GN";
+			Assert::AreEqual(rightmostleaf.getuser_id(), rightmostnode);
+			
+
 		}
 		/*
 		Test the remove function to try and remove a leaf node

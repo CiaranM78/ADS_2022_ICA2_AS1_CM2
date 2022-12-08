@@ -26,6 +26,8 @@ private:
 public:
 
 
+ 
+
     StudentKey(string user_id, string surname,
           string postcode) :
         user_id(user_id), surname(surname),postcode(postcode)

@@ -9,10 +9,10 @@ class BinaryTree
 public:
 	TNode<K,V>* root;
 	BinaryTree();
-	void add(K key, V item);
+	//void add(K key, V data);
 	//bool remove(K item);
 	//void clear();
-	//int count();
+	int count();
 	V search(K toFind);
 	//V* toArray();
 	//void printInOrder();
@@ -60,29 +60,35 @@ V BinaryTree<K, V>::search(K toFind)
 }
 
 
-
-
 template <class K, class V>
-void BinaryTree<K, V>::add(K key, V item)
-{
-	if (root == nullptr)
-	{
-		root = new TNode<K,V>(key, item);
-	}
-	else
-	{
-		root->insert(key, item);
-	}
-}
-/*
-template <class K, class V>
-int BinaryTree<K, V>::count()
+int BinaryTree<K,V>::count()
 {
 	if (root == nullptr)
 		return 0;
 	return root->count();
 }
+
+/*
+template <class K, class V>
+void BinaryTree<K, V>::add(K key, V data)
+{
+	if (root == nullptr)
+	{
+		root = new TNode<K,V>(key, data);
+	}
+	else
+	{
+		root->insert(key, data);
+	}
+}
+
+
 */
+
+
+
+
+
 /*
 template <class K, class V>
 bool BinaryTree<K, V>::remove(K item)

@@ -7,9 +7,8 @@
 #include "TNode.h"
 #include "CSV.h"
 #include "Util.h"
-#include "BinaryTree.h"
+//#include "BinaryTree.h"
 #include "String"
-
 #include "Date.h"
 #include "Student.h"
 #include "StudentKey.h"
@@ -30,7 +29,7 @@ void display(CSV& Pinfo)
 
 
 
-
+/*
 void demoSimpleHash() {
     //hasher for strings
     hash<string> hasherStr;
@@ -51,17 +50,17 @@ void demoSimpleHash() {
     cout << myHash << endl;
 }
 
-
+*/
 
 
 
 
 void readCsv()
 {
-    BinaryTree<StudentKey, Student*> tree;
-    size_t key;
+    TNode<StudentKey, Student*> tree;
+    //size_t key;
     string line;
-    ifstream fin("Text.txt");
+    ifstream fin("UnitTests.txt");
     if (fin)
 
 
@@ -71,7 +70,6 @@ void readCsv()
         {
             getline(fin, line);
             //cout << line << endl;
-            
             vector<string> data;
             string field = "";
             bool quoteOpen = false;
@@ -140,21 +138,21 @@ void readCsv()
             
             
             tree.add(key, Pinfo);
-            tree.search(key);
+            //tree.search(key);
            // tree.add(50);
            // tree.add(514789);
             //tree.add(627891);
             
 
-            //tree.remove(2146364441);
+            //tree.remove(key);
             //tree.remove(2137056470);
 
-            
+            //cout << tree.count() << endl;
      
         }
         
         printBT(tree.root);
-      //  cout << tree.count() << endl;
+        cout << tree.count() << endl;
 
      
         
