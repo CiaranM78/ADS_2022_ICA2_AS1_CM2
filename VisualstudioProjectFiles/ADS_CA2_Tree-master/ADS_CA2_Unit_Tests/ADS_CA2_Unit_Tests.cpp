@@ -34,7 +34,22 @@ namespace ADSCA2UnitTests
 			Assert::IsNotNull(tree.root);
 			Student s = tree.root->getData();
 
-			string id = "j12347";
+			string id = "j1234";
+			Assert::AreEqual(s.getuser_id(), id);
+		}
+
+
+		TEST_METHOD(TestAddToEmptyTreefail)
+		{
+			BinaryTree<StudentKey, Student> tree;
+			StudentKey key("j1234", "smith", "code123");
+			Student std("j1234", "billybob", "john");
+			tree.add(key, std);
+
+			Assert::IsNotNull(tree.root);
+			Student s = tree.root->getData();
+
+			string id = "j4321";
 			Assert::AreEqual(s.getuser_id(), id);
 		}
 
@@ -47,17 +62,30 @@ namespace ADSCA2UnitTests
 
 		TEST_METHOD(TestAddToRootLeft)
 		{
-			/*
+			
 			BinaryTree<StudentKey, Student> tree;
 			StudentKey key("j1234", "smith", "code123");
-			StudentKey key2("joe", "momma", "code69");
+			StudentKey key2("", "momma", "code69");
 			Student std("j1234", "billybob", "john", "j1234", "billybob", "john", "j1234", "billybob", "john", "j1234", "billybob", "john", "j1234", "billybob", "john");
 			Student std1("jfadsf", "bisdfadb", "jofdasfan", "j1dfasdfa4", "billafsdfa", "jfasdf", "j1234", "billybob", "john", "j1234", "billybob", "john", "j1234", "billybob", "john");
 			tree.add(key, std);
 			tree.add(key2, std1);
-
-
+			Student s = tree.root->getData();
 			Assert::IsNotNull(tree.root);
+			string id = "j4321";
+			Assert::AreEqual(s.getuser_id(), id);
+			
+
+
+			//Assert::IsNotNull(left);
+			//Assert::AreEqual(1, left->getItem());
+
+
+
+
+
+
+
 			//left = tree.root->getLeft();
 			///////////////////////
 
