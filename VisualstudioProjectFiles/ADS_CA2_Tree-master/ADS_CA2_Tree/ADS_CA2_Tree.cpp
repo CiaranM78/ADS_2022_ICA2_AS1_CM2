@@ -60,7 +60,7 @@ void readCsv()
     TNode<StudentKey, Student*> tree;
     //size_t key;
     string line;
-    ifstream fin("UnitTests.txt");
+    ifstream fin("SinglePrintTest.txt");
     if (fin)
 
 
@@ -152,7 +152,7 @@ void readCsv()
         }
         
         printBT(tree.root);
-        cout << tree.count() << endl;
+        //cout << tree.count() << endl;
        
         
     }

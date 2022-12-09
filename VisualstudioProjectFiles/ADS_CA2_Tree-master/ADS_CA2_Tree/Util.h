@@ -13,14 +13,18 @@ void printBT(const std::string& prefix, TNode<T, V>* node, bool isLeft)
 		std::cout << prefix;
 
 		std::cout << (isLeft ? "<--" : ">--");
-
+		
 		// print the value of the node
-		std::cout <<"(" << node->getKey().hash() << ")" << node->getData()->getuser_id() << std::endl;
-
+		std::cout <<"key: (" << node->getKey().hash() << ")" <<" Data: " <<"User_id(" << node->getData()->getuser_id() <<") " << "Surname(" << node->getData()->getsurname() <<") " << "Post_code(" << node->getData()->getpostcode() <<")" << std::endl;
+		
 		// enter the next tree level - left and right branch
 		printBT(prefix + (isLeft ? "|   " : "    "), node->getLeft(), true);
 		printBT(prefix + (isLeft ? "|   " : "    "), node->getRight(), false);
+
+		
 	}
+
+	
 }
 /*
 Display function to print the tree

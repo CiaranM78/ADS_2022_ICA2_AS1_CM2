@@ -144,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\data_1000.txt" />
+    <Text Include="SinglePrintTest.txt" />
     <Text Include="Text.txt" />
     <Text Include="UnitTests.txt" />
   </ItemGroup>
