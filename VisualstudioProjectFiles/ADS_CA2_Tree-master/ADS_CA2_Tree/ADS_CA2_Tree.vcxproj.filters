@@ -29,12 +29,6 @@
     <ClInclude Include="BinaryTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CSV.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ADS_CA2_Tree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="BSTNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -53,9 +47,12 @@
     <ClInclude Include="StudentKey.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BenchMark.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Text.txt">
+    <Text Include="Data_1000.txt">
       <Filter>Source Files</Filter>
     </Text>
     <Text Include="..\..\data_1000.txt">

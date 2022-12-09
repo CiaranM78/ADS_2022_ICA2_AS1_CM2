@@ -131,10 +131,9 @@
     <ClCompile Include="CSV.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ADS_CA2_Tree.h" />
+    <ClInclude Include="BenchMark.h" />
     <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="BSTNode.h" />
-    <ClInclude Include="CSV.h" />
     <ClInclude Include="Customer.h" />
     <ClInclude Include="Date.h" />
     <ClInclude Include="Student.h" />
@@ -145,7 +144,7 @@
   <ItemGroup>
     <Text Include="..\..\data_1000.txt" />
     <Text Include="SinglePrintTest.txt" />
-    <Text Include="Text.txt" />
+    <Text Include="Data_1000.txt" />
     <Text Include="UnitTests.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

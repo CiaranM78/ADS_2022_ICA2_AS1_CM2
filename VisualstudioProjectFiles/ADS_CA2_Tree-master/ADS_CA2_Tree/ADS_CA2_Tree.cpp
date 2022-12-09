@@ -5,62 +5,26 @@
 #include <fstream>
 #include <vector>
 #include "TNode.h"
-#include "CSV.h"
+
 #include "Util.h"
 //#include "BinaryTree.h"
 #include "String"
 #include "Date.h"
 #include "Student.h"
 #include "StudentKey.h"
+#include <random>
+#include "Benchmark.h"
 
 using namespace std;
 
 
-
-void display(CSV& Pinfo)
-{
-    cout << Pinfo.to_string() << endl;
-}
-
-
-
-
-
-
-
-
-/*
-void demoSimpleHash() {
-    //hasher for strings
-    hash<string> hasherStr;
-    string email = "john.smith@hotmail.com";
-    cout << "hash[" << email << "]: " << hasherStr(email) << endl;
-
-    //hasher for doubles
-    hash<double> hasherDbl;
-    double price = 123123.322;
-    cout << "hash[" << price << "]: " << hasherDbl(price) << endl;
-
-    //we can re-use a hasher
-    double weight = 12345.9897;
-    cout << "hash[" << weight << "]: " << hasherDbl(weight) << endl;
-
-    //we can store the hash value using size_t (basically an unsigned int)
-    size_t myHash = hasherStr("this is a hash value store in a uint");
-    cout << myHash << endl;
-}
-
-*/
-
-
-
-
+void demoBenchmarkVectorFindLast();
 void readCsv()
 {
     TNode<StudentKey, Student*> tree;
     //size_t key;
     string line;
-    ifstream fin("SinglePrintTest.txt");
+    ifstream fin("Data_1000.txt");
     if (fin)
 
 
@@ -95,64 +59,26 @@ void readCsv()
             {
                 data.push_back(field);
             }
-            
+            // storing all of the value within the tree
             Student *Pinfo = new Student(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11], data[12], data[13], data[14]);
             StudentKey key(data[0], data[3], data[8]);
-            // Hashing the variables stored
-            // Hashing the user_id
-            //hash<string> hasherStr;
-            //string user_id = data[0];
-            ////cout << "hash[" << user_id << "]: " << hasherStr(user_id) << endl;
-
-            ////Hashing the surname
-            //string surname = data[3];
-            ////cout << "hash[" << surname << "]: " << hasherStr(surname) << endl;
-
-            ////Hashing the postcode
-            //string postcode = data[8];
-            ////cout << "hash[" << postcode << "]: " << hasherStr(postcode) << endl;
-
-
-
-            //
-
-       
-            //key = hasherStr(user_id);
-            //   + hasherStr(surname) + hasherStr(postcode);
-
-          
-            ////cout << "key is" << " " << key << endl;
-
-            //
-
-            //
-            //Pinfo.user_id = data[0];
-            //Pinfo.surname = data[3];
-            //Pinfo.postcode = data[8];
-            //Pinfo.key = key;
-            //cout << user_id << endl;
-            //cout << items[3] << endl;
-           // cout << items[8] << endl;
-            //cout << "=====================================" << endl;
+           
             
-            
-            
+            // adding the values to the tree
             tree.add(key, Pinfo);
-            ;
-           // tree.add(50);
-           // tree.add(514789);
-            //tree.add(627891);
             
+           
+            // searching the tree to see if the key i am looking for exists - would have to modify the search method so that i can use a custom key when searching
+            // this would then locate the key and give back the data associated with the key
             tree.search(key);
-            //tree.remove(key);
-            //tree.remove(2137056470);
-
-            //cout << tree.count() << endl;
+            
      
         }
-        
+        // printing the entire tree after storing values
         printBT(tree.root);
-        //cout << tree.count() << endl;
+
+        //checking how many nodes in the tree
+        cout << tree.count() << endl;
        
         
     }
@@ -160,16 +86,15 @@ void readCsv()
 }
         
         
-        
-
+      
 
         int main()
         {
             
-            
+            // reading the CSV file
             readCsv();
             
-            
+            demoBenchmarkVectorFindLast();
 
 
         }
@@ -181,176 +106,123 @@ void readCsv()
 
 
 
-        /*
-        vector<vector<string>> readDelimitedRows(string fileName)
+
+
+
+
+
+
+
+        /*********************************** Benchmarking ***********************************/
+
+        // create a linked list from all of the values in the binary tree then plug that list instead of the vector to check the search speed
+        // compare the speed between searching in a linked list and the binary tree
+
+
+
+
+
+/// <summary>
+/// Search for a T in a vector of T objects
+/// </summary>
+/// <typeparam name="T"></typeparam>
+/// <param name="data"></param>
+/// <param name="value"></param>
+/// <returns></returns>
+/// 
+/// 
+/// 
+
+        string getRandomString(size_t length)
         {
-            ifstream fin(fileName);
-            if (!fin)
-                throw runtime_error(fileName + " was not found! Is file in the correct sub-folder with main CPP file?");
+            const string CHARACTERS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-            string rowStr;
-            string field = "";
-            vector<vector<string>> allRows;
-            vector<string> rowFields;
+            random_device random_device;
+            mt19937 generator(random_device());
+            uniform_int_distribution<> distribution(0, CHARACTERS.size() - 1);
 
-            while (!fin.eof())
+            std::string random_string;
+
+            for (std::size_t i = 0; i < length; ++i)
             {
-                getline(fin, rowStr);
-
-                bool quoteOpen = false;
-                for (int i = 0; i < rowStr.length(); i++)
-                {
-                    if (rowStr[i] == '"')
-                    {
-                        quoteOpen = !quoteOpen;
-                    }
-                    else if (!quoteOpen && rowStr[i] == ',')
-                    {
-                        rowFields.push_back(field);
-                        field = "";
-                    }
-                    else
-                    {
-                        field += rowStr[i];
-                    }
-                }
-                if (field != "")
-                {
-                    rowFields.push_back(field);
-                }
-                field = "";
-
-                if (rowFields.size() != 0)
-                    allRows.push_back(rowFields);
-
-                rowFields.clear();
+                random_string += CHARACTERS[distribution(generator)];
             }
-            return allRows;
+
+            return random_string;
         }
 
 
 
-        vector<string> splitString(string str, string delimiter)
+        template <typename T>
+        int linearSearch(vector<T> data, T value)
         {
-            vector<string> words;
-            size_t pos = 0;
-            std::string subString;
-            while ((pos = str.find(delimiter)) != std::string::npos) {
-                words.push_back(str.substr(0, pos));
-                str.erase(0, pos + delimiter.length());
-            }
-            words.push_back(str);
-
-            return words;
+            for (int i = 0; i < data.size(); i++)
+                if (data[i] == value) return i;
+            return -1;
         }
 
+        /// <summary>
+        /// A functor that we make to test the linearSearch in a vector - we need a functor because that's what measureTime takes!
+        /// </summary>
+        class LinearStringSearchFunctor {
+            vector<string> data;
+            string target;
+        public:
+            LinearStringSearchFunctor(vector<string> data, string target) : data(data), target(target) {};
 
-        /*
-
-        void demoCSVToObject()
-        {
-            //note: data is a sub-folder under the folder with main CPP file
-            string fileName = "Text.Txt";
-            vector<vector<string>> allData = readDelimitedRows(fileName);
-
-            for (vector<string> row : allData) {
-                for (string field : row) {
-                    cout << field << ",";
-                }
-                cout << endl;
+            int operator()() {
+                return linearSearch(data, target);
             }
+        };
+
+        vector<string> loadData(int N)
+        {
+            vector<string> data;
+
+            //load data (e.g., random strings) into a vector (this is like your tree or linked list)
+            int stringLength = 4;
+
+            for (int i = 0; i < N; i++)
+                data.push_back(getRandomString(stringLength));
+
+            return data;
         }
 
-        /*
-        void demoParseString()
-        {
-            string str = "ford, 2012, 1299.55, 25/12/2022";
-            string delimiter = ",";
+        //lets benchmark how long it takes to find the last string in a vector
+        //we should repeat the test below and run multiple tests on finding last string in a vector and get average run time
+        void demoBenchmarkVectorFindLast() {
+            //number of strings in the vector (like your CSV where N=1000,10000,100000)
+            int N = 1000;
 
-            vector<string> rowFromCSV = splitString(str, delimiter);
+            //get some data (yours would be data from CSV in a list/vector vs your BinaryTree)
+            vector<string> data = loadData(N);
 
-            if (rowFromCSV.size() == 4)
+            //pick the last string in the structure
+            string searchString = data[data.size() - 1];
+
+            /******************************* IMPORTANT PART > *******************************/
+            int numberOfTests = 100;
+            double totalTestTimeInNS = 0;
+            for (int i = 0; i < numberOfTests; i++)
             {
-                string make = rowFromCSV[0];
-                int year = stoi(rowFromCSV[1]);
-                double price = stod(rowFromCSV[2]);
-                vector<string> dateWords = splitString(rowFromCSV[3], "/");
+                //make up the functor
+                LinearStringSearchFunctor searchFunc(data, searchString);
 
-                if (dateWords.size() == 3)
-                {
-                    string user_id = dateWords[0];
-                    string surname = dateWords[1];
-                    string postcode = dateWords[2];
-
-
-                    CSV registrationDate(user_id, surname, postcode);
-                    cout << "Car: " << registrationDate << endl;
-                }
+                //pass the functor into measureTime
+                totalTestTimeInNS += measureTime(searchFunc);
             }
+
+            //get average across all tests
+            double averageSearchTimeInMS = totalTestTimeInNS / numberOfTests;
+
+            //convert ns to ms
+            averageSearchTimeInMS /= 1000;
+
+            //see how long it takes to find the string
+            cout << "Vector - Average last element search time [Nr = " << N << ",Tests = " << numberOfTests << "]: " << averageSearchTimeInMS << "ms" << endl;
+
+            /******************************* < IMPORTANT PART *******************************/
         }
-        */
-
-       
-
-        // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-        // Debug program: F5 or Debug > Start Debugging menu
-
-        // Tips for Getting Started: 
-        //   1. Use the Solution Explorer window to add/manage files
-        //   2. Use the Team Explorer window to connect to source control
-        //   3. Use the Output window to see build output and other messages
-        //   4. Use the Error List window to view errors
-        //   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-        //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
-
-
-            /*
-
-            void readCsv()
-            {
-                string line;
-                ifstream fin("Text.txt");
-                if (fin)
-                {
-
-                    while (!fin.eof())
-                    {
-                        getline(fin, line);
-                        cout << line << endl;
-                        Personalinfo Pinfo;
-                        vector<string> items;
-                        string field = "";
-                        bool quoteOpen = false;
-                        for (int i = 0; i < line.length(); i++)
-                        {
-                            if (line[i] == '"')
-                            {
-                                quoteOpen = !quoteOpen;
-                            }
-                            else if (!quoteOpen && line[i]
-                                == ',')
-                            {
-                                items.push_back(field);
-                                field = "";
-                            }
-
-                            else
-                            {
-                                field += line[i];
-                            }
-                        }
-                        if (field != "")
-                        {
-                            items.push_back(field);
-                        }
-
-
-                        /*
-                        Pinfo.user_id = stoi(items[0]);
-                        Pinfo.surname = items[1];
-                        Pinfo.postcode = items[2];
-                        cout << "=====================================" << endl;
-                        */
 
 
    
