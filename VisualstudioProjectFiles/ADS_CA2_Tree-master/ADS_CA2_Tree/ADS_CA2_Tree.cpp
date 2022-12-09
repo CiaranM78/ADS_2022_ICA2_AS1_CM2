@@ -138,12 +138,12 @@ void readCsv()
             
             
             tree.add(key, Pinfo);
-            //tree.search(key);
+            ;
            // tree.add(50);
            // tree.add(514789);
             //tree.add(627891);
             
-
+            tree.search(key);
             //tree.remove(key);
             //tree.remove(2137056470);
 
@@ -153,8 +153,7 @@ void readCsv()
         
         printBT(tree.root);
         cout << tree.count() << endl;
-
-     
+       
         
     }
     

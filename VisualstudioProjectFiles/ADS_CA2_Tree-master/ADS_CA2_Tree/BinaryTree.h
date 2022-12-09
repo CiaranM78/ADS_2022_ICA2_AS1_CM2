@@ -21,7 +21,7 @@ public:
 	//void printPreOrder(TNode<K, V>* node);
 	//void printPostOrder();
 	//void printPostOrder(TNode<K, V>* node);
-
+	void addItemToArray(BinaryTree<K,V>* node, int& pos, int* arr)
 	~BinaryTree() {};
 };
 
@@ -170,9 +170,9 @@ bool BinaryTree<K, V>::remove(K item)
 	Helper Function to put the binary tree into a sorted array;
 
 */
-/*
+
 template <class K, class V>
-void BinaryTree<K, V>::addItemToArray(BSTNode<T>* node, int& pos, int* arr)
+void BinaryTree<K, V>::addItemToArray(BinaryTree<K,V>* node, int& pos, int* arr)
 {
 	if (node != nullptr)
 	{
@@ -183,7 +183,7 @@ void BinaryTree<K, V>::addItemToArray(BSTNode<T>* node, int& pos, int* arr)
 	}
 
 }
-*/
+
 /**
 	This function is used to convert this binary tree into a sorted array.
 

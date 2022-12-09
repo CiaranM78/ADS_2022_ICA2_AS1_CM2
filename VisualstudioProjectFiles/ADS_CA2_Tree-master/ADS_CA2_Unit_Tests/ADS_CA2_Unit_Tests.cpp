@@ -367,28 +367,90 @@ namespace ADSCA2UnitTests
 
 		TEST_METHOD(TestRemoveNodeWithTwoChildren)
 		{
-			/*BinaryTree<int> tree;
-			tree.add(4);
-			tree.add(2);
-			tree.add(6);
-			tree.add(1);
-			tree.add(3);
-			tree.add(5);
-			tree.add(7);
-			Assert::AreEqual(7, tree.count());
-			tree.remove(2);
-			Assert::AreEqual(6, tree.count());
-			Assert::AreEqual(4, tree.root->getItem());
-			Assert::AreEqual(3, tree.root->getLeft()->getItem());
-			Assert::AreEqual(6, tree.root->getRight()->getItem());
-			BSTNode<int>* left = tree.root->getLeft();
-			BSTNode<int>* right = tree.root->getRight();
-			Assert::AreEqual(1, left->getLeft()->getItem());
+			TNode<StudentKey, Student> tree;
+			
+
+			StudentKey key1("FNO15QZA3TB", "Burks", "6723 EV");
+			StudentKey key2("NJB82NEB7RA", "Ortega", "03854");
+			StudentKey key3("LGF12DCE4WF", "Rose", "686404");
+			StudentKey key4("RDS11RXM7WY", "Morse", "08450");
+			
+
+			Student std1("FNO15QZA3TB", "Burks", "6723 EV");
+			Student std2("NJB82NEB7RA", "Ortega", "03854");
+			Student std3("LGF12DCE4WF", "Rose", "686404");
+			Student std4("KDS98KUM7KI", "Boone", "83147");
+			
+
+
+
+
+
+			tree.add(key1, std1);
+			tree.add(key2, std2);
+			tree.add(key3, std3);
+			tree.add(key4, std4);
+			Assert::AreEqual(4, tree.count());
+			tree.remove(key2);
+			Assert::AreEqual(3, tree.count());
+			Student rootnode = tree.root->getData();
+			string rootid = "FNO15QZA3TB";
+			Assert::AreEqual(rootnode.getuser_id(),rootid);
+			TNode<StudentKey, Student>* left = tree.root->getLeft();
+			Student l = left->getData();
+			string leftid = "KDS98KUM7KI";
+			Assert::AreEqual(leftid,l.getuser_id());
+			Student ll = left->getLeft()->getData();
+			string leftleftid = "LGF12DCE4WF";
+			Assert::AreEqual(leftleftid, ll.getuser_id());
 			Assert::IsNull(left->getRight());
-			Assert::AreEqual(5, right->getLeft()->getItem());
-			Assert::AreEqual(7, right->getRight()->getItem());*/
+			
+			
 		}
 
+
+		TEST_METHOD(TestRemoveNodeWithTwoChildrenfail)
+		{
+			TNode<StudentKey, Student> tree;
+
+
+			StudentKey key1("FNO15QZA3TB", "Burks", "6723 EV");
+			StudentKey key2("NJB82NEB7RA", "Ortega", "03854");
+			StudentKey key3("LGF12DCE4WF", "Rose", "686404");
+			StudentKey key4("RDS11RXM7WY", "Morse", "08450");
+
+
+			Student std1("FNO15QZA3TB", "Burks", "6723 EV");
+			Student std2("NJB82NEB7RA", "Ortega", "03854");
+			Student std3("LGF12DCE4WF", "Rose", "686404");
+			Student std4("KDS98KUM7KI", "Boone", "83147");
+
+
+
+
+
+
+			tree.add(key1, std1);
+			tree.add(key2, std2);
+			tree.add(key3, std3);
+			tree.add(key4, std4);
+			Assert::AreEqual(4, tree.count());
+			//tree.remove(key2);
+			Assert::AreEqual(4, tree.count());
+			Student rootnode = tree.root->getData();
+			string rootid = "FNO15QZA3TB";
+			Assert::AreEqual(rootnode.getuser_id(), rootid);
+			TNode<StudentKey, Student>* left = tree.root->getLeft();
+			Student l = left->getData();
+			string leftid = "NJB82NEB7RA";
+			Assert::AreEqual(leftid, l.getuser_id());
+			Student ll = left->getLeft()->getData();
+			string leftleftid = "LGF12DCE4WF";
+			Assert::AreEqual(leftleftid, ll.getuser_id());
+			Assert::IsNull(left->getRight());
+
+
+		}
 		/*
 		Test the remove function to try and a node with multiple children
 		to test this we will use the following tree:
@@ -446,9 +508,35 @@ namespace ADSCA2UnitTests
 			Assert::IsNull(tree.root->getRight()->getRight()->getLeft());*/
 		}
 
+		TEST_METHOD(SearchForKeyAfterInsertedpass)
+		{
+			TNode<StudentKey, Student> tree;
+			StudentKey key1("j1234", "smith", "code123");
+			StudentKey key2("j114", "sm5", "code143");
+			Student std1("j1234", "billybob", "john");
+			Student std2("j123415441", "bill151", "jo1515612");
+			tree.add(key1, std1);
+			tree.add(key2, std2);
 
+		
+			Assert::IsTrue(tree.search(key2));
+		}
 
+		TEST_METHOD(SearchForKeyAfterInsertedfail)
+		{
+			TNode<StudentKey, Student> tree;
+			StudentKey key1("j1234", "smith", "code123");
+			StudentKey key2("j114", "sm5", "code143");
+			Student std1("j1234", "billybob", "john");
+			Student std2("j123415441", "bill151", "jo1515612");
+			tree.add(key1, std1);
+			//tree.add(key2, std2);
 
+		
+			Assert::IsTrue(tree.search(key2));
+			
+
+		}
 
 
 

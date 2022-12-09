@@ -38,29 +38,7 @@ void printBT(TNode<T, V>* node)
 Recursive Function to add each element when balancing a binary tree
 */
 
-/*
-void createBalancedTree(BinaryTree<int>& tree, int min, int max, int* arr)
-{
-	if (min < max)
-	{
-		int mid = (min + max) / 2;
-		//add(node.getKey(), node.getData())
-		tree.add(arr[mid]);
-		createBalancedTree(tree, min, mid, arr);
-		createBalancedTree(tree, mid + 1, max, arr);
-	}
-};*/
-/*
-Recursive Function used to balance a binary tree
-*/
-/*
-void balance(BinaryTree<int>& tree)
-{
-	int* arr = tree.toArray();
-	int max = tree.count();
-	tree.clear();
-	createBalancedTree(tree, 0, max, arr);
-	delete[] arr;
 
-}
-*/
+
+
+

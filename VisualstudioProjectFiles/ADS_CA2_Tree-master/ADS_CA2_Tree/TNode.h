@@ -49,6 +49,8 @@ public:
     bool insert(K key, E data);
     bool remove(K key);
     void add(K key, E data);
+    bool search(K key);
+    void clear();
     
 };
 
@@ -178,6 +180,10 @@ TNode<typename K, typename E>::~TNode()
     }
     */
    
+   
+   
+
+
     template <class K, class E>
     void TNode<K, E>::add(K key, E data)
     {
@@ -191,7 +197,33 @@ TNode<typename K, typename E>::~TNode()
         }
     }
 
-    
+    template <class K, class E>
+    bool TNode<K, E>::search(K key)
+    {
+        TNode<K, E>* node = root;
+        while (node != nullptr)
+        {
+            if (node->getKey().hash() == key.hash())
+            {
+                break;
+            }
+            else if (key.hash() < node->getKey().hash())
+            {
+                node = node->getLeft();
+            }
+            else
+            {
+                node = node->getRight();
+            }
+        }
+        if (node != nullptr)
+        {
+            return true;
+        }
+        else
+            return false;
+
+    }
 
     template <typename K, typename E>
     bool TNode<K,E>::insert(K key, E data)
