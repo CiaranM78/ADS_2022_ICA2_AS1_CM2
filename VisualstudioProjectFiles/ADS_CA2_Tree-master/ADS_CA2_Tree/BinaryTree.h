@@ -21,7 +21,7 @@ public:
 	//void printPreOrder(TNode<K, V>* node);
 	//void printPostOrder();
 	//void printPostOrder(TNode<K, V>* node);
-	void addItemToArray(BinaryTree<K,V>* node, int& pos, int* arr)
+	
 	~BinaryTree() {};
 };
 
@@ -171,18 +171,7 @@ bool BinaryTree<K, V>::remove(K item)
 
 */
 
-template <class K, class V>
-void BinaryTree<K, V>::addItemToArray(BinaryTree<K,V>* node, int& pos, int* arr)
-{
-	if (node != nullptr)
-	{
-		addItemToArray(node->getLeft(), pos, arr);
-		arr[pos] = node->getItem();
-		pos++;
-		addItemToArray(node->getRight(), pos, arr);
-	}
 
-}
 
 /**
 	This function is used to convert this binary tree into a sorted array.
